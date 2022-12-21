@@ -1,0 +1,36 @@
+list all hosts, for oracle meaning rac, for pg meaning cluster
+---
+tags:
+- metadata
+summary: list host info
+description: ""
+parameters:
+- name: Authorization
+  in: header
+  type: string
+  required: true
+- name: host_name
+  in: query
+  type: string
+  required: false
+  description: ""
+- name: site_code
+  in: query
+  type: string
+  required: false
+  description: ""
+- name: page
+  in: query
+  type: integer
+  required: true
+  description: ""
+  default: 1
+- name: page_size
+  in: query
+  type: integer
+  required: true
+  description: ""
+  default: 20
+responses:
+  200:
+    description: "host info list"

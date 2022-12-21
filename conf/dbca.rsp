@@ -1,0 +1,17 @@
+responseFileVersion=/oracle/assistants/rspfmt_dbca_response_schema_v19.0.0
+gdbName={ORACLE_SID}.webex.com
+sid={ORACLE_SID}
+databaseConfigType=RAC
+createAsContainerDatabase=false
+nodelist={nodelist}
+templateName=/home/oracle/{generalPurpose}.dbt
+sysPassword=sysnotallow
+systemPassword=sysnotallow
+emConfiguration=NONE
+dbsnmpPassword=sysnotallow
+storageType=ASM
+datafileDestination=+DG_DATA
+asmsnmpPassword=sysnotalllow
+characterSet={characterSet}
+listeners=LISTENER
+initParams=cursor_sharing=EXACT,session_cached_cursors=1500,optimizer_mode=CHOOSE,optimizer_index_cost_adj=15,optimizer_index_caching=90,open_cursors=3000,processes=3000,db_files=1000

@@ -1,0 +1,43 @@
+create new instance info
+---
+tags:
+- metadata
+summary: create new instance_info
+description: ""
+parameters:
+- name: Authorization
+  in: header
+  type: string
+  required: true
+- name: body
+  in: body
+  required: true
+  schema:
+    type: object
+    required:
+    - trim_host
+    - host_name
+    - db_name
+    - instance_name
+    - created_by
+    - modified_by
+    properties:
+      trim_host:
+        type: string
+      host_name:
+        type: string
+      db_name:
+        type: string
+      instance_name:
+        type: string
+      date_added:
+        type: string
+      lastmodifieddate:
+        type: string
+      created_by:
+        type: string
+      modified_by:
+        type: string
+responses:
+  200:
+    description: "detail for instance info"

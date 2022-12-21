@@ -1,0 +1,24 @@
+list database
+---
+tags:
+- metadata
+summary: list all database and filter database
+description: ""
+parameters:
+- name: Authorization
+  in: header
+  type: string
+  required: true
+- name: hostname
+  in: path
+  type: string
+  required: false
+  description: "like sjdbormt0152"
+responses:
+  200:
+    schema:
+      type: object
+      example:
+        trim_host: sjdbormt015
+        db_vendor: oracle
+        db_version: 10.9

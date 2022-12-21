@@ -1,0 +1,46 @@
+create appln_pool_info
+---
+tags:
+- metadata
+summary: create new db user
+parameters:
+- name: Authorization
+  in: header
+  type: string
+  required: true
+- name: body
+  in: body
+  required: true
+  schema:
+    type: object
+    required:
+    - db_name
+    - appln_support_code
+    - schemaname
+    - schematype
+    - createtime
+    - lastmodifiedtime
+    properties:
+      db_name:
+        type: string
+      appln_support_code:
+        type: string
+      schemaname:
+        type: string
+      password:
+        type: string
+      password_vault_path:
+        type: string
+      created_by:
+        type: string
+      modified_by:
+        type: string
+      schematype:
+        type: string
+      createtime:
+        type: string
+      lastmodifiedtime:
+        type: string
+responses:
+  200:
+    description: "detail for db user"

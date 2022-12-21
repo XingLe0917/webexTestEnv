@@ -1,0 +1,12 @@
+{ "depotdb_url":"(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.254.171.32)(PORT=1701))(ADDRESS=(PROTOCOL=TCP)(HOST=10.254.171.33)(PORT=1701))(ADDRESS=(PROTOCOL=TCP)(HOST=10.254.171.34)(PORT=1701))(LOAD_BALANCE=yes)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=bjauditdbha.webex.com)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC)(RETRIES=3)(DELAY=5))))",
+  "depotdb_username":"depot",
+  "depotdb_password":"pass",
+  "enable_shareplexconfigfile_monitor":"true",
+  "enable_shareplexreplication_monitor":"true",
+  "influxDB_ip": "10.254.142.24",
+  "influxDB_port": "8086",
+  "influxDB_user": "admin",
+  "influxDB_china_ip": "10.254.142.24",
+  "influxDB_pwd": "YVc1bWJIVjRRRTVwYUdGdg=="
+}
+

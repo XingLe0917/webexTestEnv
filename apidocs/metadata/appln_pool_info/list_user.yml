@@ -1,0 +1,23 @@
+db user management, related to table(appln_pool_info)
+---
+tags:
+- metadata
+summary: list all db users
+parameters:
+- name: Authorization
+  in: header
+  type: string
+  required: true
+- name: schemaname
+  in: path
+  type: string
+  required: false
+  description: ""
+- name: db_name
+  in: path
+  type: string
+  required: false
+  description: "like auditdb"
+response:
+  200:
+    description: ""

@@ -1,0 +1,60 @@
+create new database
+---
+tags:
+- metadata
+summary: create new database info
+description: create new database info
+parameters:
+- name: Authorization
+  in: header
+  type: string
+  required: true
+- name: body
+  in: body
+  required: true
+  schema:
+    type: object
+    required:
+    - db_name           
+    - host_name         
+    - cluster_name      
+    - db_vendor         
+    - db_home           
+    - listener_port     
+    - monitored         
+    - createtime        
+    - lastmodifiedtime  
+    properties:
+      db_name:
+        type: string
+      host_name:
+        type: string
+      cluster_name:
+        type: string
+      db_vendor:
+        type: string
+      db_version:
+        type: string
+      db_type:
+        type: string
+      application_type:
+        type: string
+      appln_support_code:
+        type: string
+      db_home:
+        type: string
+      listener_port:
+        type: string
+      monitored:
+        type: string
+      wbx_cluster:
+        type: string
+      web_domain:
+        type: string
+      createtime:
+        type: string
+      lastmodifiedtime:
+        type: string
+responses:
+  200:
+    description: "database_info detail"

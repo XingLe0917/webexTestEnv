@@ -1,0 +1,3122 @@
+127.0.0.1 - - [20/Jan/2022:12:37:08 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 12:39:38 +0800] [29976] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10d183520>
+  on_reload: <function OnReload.on_reload at 0x10d183640>
+  when_ready: <function WhenReady.when_ready at 0x10d183760>
+  pre_fork: <function Prefork.pre_fork at 0x10d183880>
+  post_fork: <function Postfork.post_fork at 0x10d1839a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10d183ac0>
+  worker_int: <function WorkerInt.worker_int at 0x10d183be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10d183d00>
+  pre_exec: <function PreExec.pre_exec at 0x10d183e20>
+  pre_request: <function PreRequest.pre_request at 0x10d183f40>
+  post_request: <function PostRequest.post_request at 0x10d1a0040>
+  child_exit: <function ChildExit.child_exit at 0x10d1a0160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10d1a0280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10d1a03a0>
+  on_exit: <function OnExit.on_exit at 0x10d1a04c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 12:39:38 +0800] [29976] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 12:39:38 +0800] [29976] [DEBUG] Arbiter booted
+[2022-01-20 12:39:38 +0800] [29976] [INFO] Listening at: http://0.0.0.0:9000 (29976)
+[2022-01-20 12:39:38 +0800] [29976] [INFO] Using worker: sync
+[2022-01-20 12:39:38 +0800] [29977] [INFO] Booting worker with pid: 29977
+[2022-01-20 12:39:38 +0800] [29978] [INFO] Booting worker with pid: 29978
+[2022-01-20 12:39:38 +0800] [29979] [INFO] Booting worker with pid: 29979
+[2022-01-20 12:39:38 +0800] [29976] [DEBUG] 3 workers
+[2022-01-20 12:39:52 +0800] [29977] [DEBUG] POST /api/getAuthorizationForMA
+127.0.0.1 - - [20/Jan/2022:12:40:02 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 12:41:15 +0800] [30164] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10991b520>
+  on_reload: <function OnReload.on_reload at 0x10991b640>
+  when_ready: <function WhenReady.when_ready at 0x10991b760>
+  pre_fork: <function Prefork.pre_fork at 0x10991b880>
+  post_fork: <function Postfork.post_fork at 0x10991b9a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10991bac0>
+  worker_int: <function WorkerInt.worker_int at 0x10991bbe0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10991bd00>
+  pre_exec: <function PreExec.pre_exec at 0x10991be20>
+  pre_request: <function PreRequest.pre_request at 0x10991bf40>
+  post_request: <function PostRequest.post_request at 0x109938040>
+  child_exit: <function ChildExit.child_exit at 0x109938160>
+  worker_exit: <function WorkerExit.worker_exit at 0x109938280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1099383a0>
+  on_exit: <function OnExit.on_exit at 0x1099384c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 12:41:15 +0800] [30164] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 12:41:15 +0800] [30164] [DEBUG] Arbiter booted
+[2022-01-20 12:41:15 +0800] [30164] [INFO] Listening at: http://0.0.0.0:9000 (30164)
+[2022-01-20 12:41:15 +0800] [30164] [INFO] Using worker: sync
+[2022-01-20 12:41:15 +0800] [30165] [INFO] Booting worker with pid: 30165
+[2022-01-20 12:41:15 +0800] [30166] [INFO] Booting worker with pid: 30166
+[2022-01-20 12:41:15 +0800] [30167] [INFO] Booting worker with pid: 30167
+[2022-01-20 12:41:15 +0800] [30164] [DEBUG] 3 workers
+[2022-01-20 12:41:28 +0800] [30167] [DEBUG] POST /api/getAuthorizationForMA
+127.0.0.1 - - [20/Jan/2022:12:41:32 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 12:46:46 +0800] [30896] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x107073520>
+  on_reload: <function OnReload.on_reload at 0x107073640>
+  when_ready: <function WhenReady.when_ready at 0x107073760>
+  pre_fork: <function Prefork.pre_fork at 0x107073880>
+  post_fork: <function Postfork.post_fork at 0x1070739a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x107073ac0>
+  worker_int: <function WorkerInt.worker_int at 0x107073be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x107073d00>
+  pre_exec: <function PreExec.pre_exec at 0x107073e20>
+  pre_request: <function PreRequest.pre_request at 0x107073f40>
+  post_request: <function PostRequest.post_request at 0x107090040>
+  child_exit: <function ChildExit.child_exit at 0x107090160>
+  worker_exit: <function WorkerExit.worker_exit at 0x107090280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1070903a0>
+  on_exit: <function OnExit.on_exit at 0x1070904c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 12:46:46 +0800] [30896] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 12:46:46 +0800] [30896] [DEBUG] Arbiter booted
+[2022-01-20 12:46:46 +0800] [30896] [INFO] Listening at: http://0.0.0.0:9000 (30896)
+[2022-01-20 12:46:46 +0800] [30896] [INFO] Using worker: sync
+[2022-01-20 12:46:46 +0800] [30897] [INFO] Booting worker with pid: 30897
+[2022-01-20 12:46:46 +0800] [30898] [INFO] Booting worker with pid: 30898
+[2022-01-20 12:46:47 +0800] [30899] [INFO] Booting worker with pid: 30899
+[2022-01-20 12:46:47 +0800] [30896] [DEBUG] 3 workers
+[2022-01-20 12:46:54 +0800] [30898] [DEBUG] POST /api/getAuthorizationForMA
+127.0.0.1 - - [20/Jan/2022:12:47:02 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 12:49:31 +0800] [31231] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10cf67520>
+  on_reload: <function OnReload.on_reload at 0x10cf67640>
+  when_ready: <function WhenReady.when_ready at 0x10cf67760>
+  pre_fork: <function Prefork.pre_fork at 0x10cf67880>
+  post_fork: <function Postfork.post_fork at 0x10cf679a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10cf67ac0>
+  worker_int: <function WorkerInt.worker_int at 0x10cf67be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10cf67d00>
+  pre_exec: <function PreExec.pre_exec at 0x10cf67e20>
+  pre_request: <function PreRequest.pre_request at 0x10cf67f40>
+  post_request: <function PostRequest.post_request at 0x10cf84040>
+  child_exit: <function ChildExit.child_exit at 0x10cf84160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10cf84280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10cf843a0>
+  on_exit: <function OnExit.on_exit at 0x10cf844c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 12:49:31 +0800] [31231] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 12:49:31 +0800] [31231] [DEBUG] Arbiter booted
+[2022-01-20 12:49:31 +0800] [31231] [INFO] Listening at: http://0.0.0.0:9000 (31231)
+[2022-01-20 12:49:31 +0800] [31231] [INFO] Using worker: sync
+[2022-01-20 12:49:31 +0800] [31232] [INFO] Booting worker with pid: 31232
+[2022-01-20 12:49:32 +0800] [31233] [INFO] Booting worker with pid: 31233
+[2022-01-20 12:49:32 +0800] [31234] [INFO] Booting worker with pid: 31234
+[2022-01-20 12:49:32 +0800] [31231] [DEBUG] 3 workers
+[2022-01-20 12:49:39 +0800] [31234] [DEBUG] POST /api/getAuthorizationForMA
+127.0.0.1 - - [20/Jan/2022:12:49:43 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 13:20:19 +0800] [32772] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: [%(asctime)s][%(filename)s][line:%(lineno)d][%(thread)d][%(levelname)s] %(message)s
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10a6e3520>
+  on_reload: <function OnReload.on_reload at 0x10a6e3640>
+  when_ready: <function WhenReady.when_ready at 0x10a6e3760>
+  pre_fork: <function Prefork.pre_fork at 0x10a6e3880>
+  post_fork: <function Postfork.post_fork at 0x10a6e39a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10a6e3ac0>
+  worker_int: <function WorkerInt.worker_int at 0x10a6e3be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10a6e3d00>
+  pre_exec: <function PreExec.pre_exec at 0x10a6e3e20>
+  pre_request: <function PreRequest.pre_request at 0x10a6e3f40>
+  post_request: <function PostRequest.post_request at 0x10a700040>
+  child_exit: <function ChildExit.child_exit at 0x10a700160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10a700280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10a7003a0>
+  on_exit: <function OnExit.on_exit at 0x10a7004c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 13:20:19 +0800] [32772] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 13:20:19 +0800] [32772] [DEBUG] Arbiter booted
+[2022-01-20 13:20:19 +0800] [32772] [INFO] Listening at: http://0.0.0.0:9000 (32772)
+[2022-01-20 13:20:19 +0800] [32772] [INFO] Using worker: sync
+[2022-01-20 13:20:19 +0800] [32773] [INFO] Booting worker with pid: 32773
+[2022-01-20 13:20:19 +0800] [32774] [INFO] Booting worker with pid: 32774
+[2022-01-20 13:20:19 +0800] [32775] [INFO] Booting worker with pid: 32775
+[2022-01-20 13:20:19 +0800] [32772] [DEBUG] 3 workers
+[2022-01-20 13:20:31 +0800] [32773] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 13:21:08 +0800] [32775] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 13:21:40 +0800] [32996] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: [%(asctime)s][%(filename)s][line:%(lineno)d][%(thread)d][%(levelname)s] %(message)s
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1108fb520>
+  on_reload: <function OnReload.on_reload at 0x1108fb640>
+  when_ready: <function WhenReady.when_ready at 0x1108fb760>
+  pre_fork: <function Prefork.pre_fork at 0x1108fb880>
+  post_fork: <function Postfork.post_fork at 0x1108fb9a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1108fbac0>
+  worker_int: <function WorkerInt.worker_int at 0x1108fbbe0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1108fbd00>
+  pre_exec: <function PreExec.pre_exec at 0x1108fbe20>
+  pre_request: <function PreRequest.pre_request at 0x1108fbf40>
+  post_request: <function PostRequest.post_request at 0x110918040>
+  child_exit: <function ChildExit.child_exit at 0x110918160>
+  worker_exit: <function WorkerExit.worker_exit at 0x110918280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1109183a0>
+  on_exit: <function OnExit.on_exit at 0x1109184c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 13:21:40 +0800] [32996] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 13:21:40 +0800] [32996] [DEBUG] Arbiter booted
+[2022-01-20 13:21:40 +0800] [32996] [INFO] Listening at: http://0.0.0.0:9000 (32996)
+[2022-01-20 13:21:40 +0800] [32996] [INFO] Using worker: sync
+[2022-01-20 13:21:40 +0800] [32997] [INFO] Booting worker with pid: 32997
+[2022-01-20 13:21:40 +0800] [32998] [INFO] Booting worker with pid: 32998
+[2022-01-20 13:21:40 +0800] [32999] [INFO] Booting worker with pid: 32999
+[2022-01-20 13:21:40 +0800] [32996] [DEBUG] 3 workers
+[2022-01-20 13:21:49 +0800] [32999] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 13:24:52 +0800] [33391] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: [%(asctime)s][%(filename)s][line:%(lineno)d][%(thread)d][%(levelname)s] %(message)s
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x104c13520>
+  on_reload: <function OnReload.on_reload at 0x104c13640>
+  when_ready: <function WhenReady.when_ready at 0x104c13760>
+  pre_fork: <function Prefork.pre_fork at 0x104c13880>
+  post_fork: <function Postfork.post_fork at 0x104c139a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x104c13ac0>
+  worker_int: <function WorkerInt.worker_int at 0x104c13be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x104c13d00>
+  pre_exec: <function PreExec.pre_exec at 0x104c13e20>
+  pre_request: <function PreRequest.pre_request at 0x104c13f40>
+  post_request: <function PostRequest.post_request at 0x104c30040>
+  child_exit: <function ChildExit.child_exit at 0x104c30160>
+  worker_exit: <function WorkerExit.worker_exit at 0x104c30280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x104c303a0>
+  on_exit: <function OnExit.on_exit at 0x104c304c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 13:24:53 +0800] [33391] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 13:24:53 +0800] [33391] [DEBUG] Arbiter booted
+[2022-01-20 13:24:53 +0800] [33391] [INFO] Listening at: http://0.0.0.0:9000 (33391)
+[2022-01-20 13:24:53 +0800] [33391] [INFO] Using worker: sync
+[2022-01-20 13:24:53 +0800] [33392] [INFO] Booting worker with pid: 33392
+[2022-01-20 13:24:53 +0800] [33393] [INFO] Booting worker with pid: 33393
+[2022-01-20 13:24:53 +0800] [33394] [INFO] Booting worker with pid: 33394
+[2022-01-20 13:24:53 +0800] [33391] [DEBUG] 3 workers
+[2022-01-20 13:25:02 +0800] [33394] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 13:31:34 +0800] [34260] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: [%(asctime)s][%(filename)s][line:%(lineno)d][%(thread)d][%(levelname)s] %(message)s
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x105ce3520>
+  on_reload: <function OnReload.on_reload at 0x105ce3640>
+  when_ready: <function WhenReady.when_ready at 0x105ce3760>
+  pre_fork: <function Prefork.pre_fork at 0x105ce3880>
+  post_fork: <function Postfork.post_fork at 0x105ce39a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x105ce3ac0>
+  worker_int: <function WorkerInt.worker_int at 0x105ce3be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x105ce3d00>
+  pre_exec: <function PreExec.pre_exec at 0x105ce3e20>
+  pre_request: <function PreRequest.pre_request at 0x105ce3f40>
+  post_request: <function PostRequest.post_request at 0x105d00040>
+  child_exit: <function ChildExit.child_exit at 0x105d00160>
+  worker_exit: <function WorkerExit.worker_exit at 0x105d00280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x105d003a0>
+  on_exit: <function OnExit.on_exit at 0x105d004c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 13:31:34 +0800] [34260] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 13:31:34 +0800] [34260] [DEBUG] Arbiter booted
+[2022-01-20 13:31:34 +0800] [34260] [INFO] Listening at: http://0.0.0.0:9000 (34260)
+[2022-01-20 13:31:34 +0800] [34260] [INFO] Using worker: sync
+[2022-01-20 13:31:34 +0800] [34261] [INFO] Booting worker with pid: 34261
+[2022-01-20 13:31:34 +0800] [34262] [INFO] Booting worker with pid: 34262
+[2022-01-20 13:31:34 +0800] [34263] [INFO] Booting worker with pid: 34263
+[2022-01-20 13:31:35 +0800] [34260] [DEBUG] 3 workers
+[2022-01-20 13:31:51 +0800] [34261] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 13:31:51 +0800] [34261] [DEBUG] this is debug message
+[2022-01-20 13:31:51 +0800] [34261] [ERROR] this is error message
+[2022-01-20 13:31:51 +0800] [34261] [CRITICAL] this is critical message
+[2022-01-20 13:43:22 +0800] [35876] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: [%(asctime)s][%(filename)s][line:%(lineno)d][%(thread)d][%(levelname)s] %(message)s
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10e463520>
+  on_reload: <function OnReload.on_reload at 0x10e463640>
+  when_ready: <function WhenReady.when_ready at 0x10e463760>
+  pre_fork: <function Prefork.pre_fork at 0x10e463880>
+  post_fork: <function Postfork.post_fork at 0x10e4639a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10e463ac0>
+  worker_int: <function WorkerInt.worker_int at 0x10e463be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10e463d00>
+  pre_exec: <function PreExec.pre_exec at 0x10e463e20>
+  pre_request: <function PreRequest.pre_request at 0x10e463f40>
+  post_request: <function PostRequest.post_request at 0x10e480040>
+  child_exit: <function ChildExit.child_exit at 0x10e480160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10e480280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10e4803a0>
+  on_exit: <function OnExit.on_exit at 0x10e4804c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 13:43:22 +0800] [35876] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 13:43:22 +0800] [35876] [DEBUG] Arbiter booted
+[2022-01-20 13:43:22 +0800] [35876] [INFO] Listening at: http://0.0.0.0:9000 (35876)
+[2022-01-20 13:43:22 +0800] [35876] [INFO] Using worker: sync
+[2022-01-20 13:43:22 +0800] [35877] [INFO] Booting worker with pid: 35877
+[2022-01-20 13:43:22 +0800] [35878] [INFO] Booting worker with pid: 35878
+[2022-01-20 13:43:22 +0800] [35879] [INFO] Booting worker with pid: 35879
+[2022-01-20 13:43:22 +0800] [35876] [DEBUG] 3 workers
+[2022-01-20 13:43:28 +0800] [35877] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 13:44:51 +0800] [36068] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: [%(asctime)s][%(filename)s][line:%(lineno)d][%(thread)d][%(levelname)s] %(message)s
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10fb07520>
+  on_reload: <function OnReload.on_reload at 0x10fb07640>
+  when_ready: <function WhenReady.when_ready at 0x10fb07760>
+  pre_fork: <function Prefork.pre_fork at 0x10fb07880>
+  post_fork: <function Postfork.post_fork at 0x10fb079a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10fb07ac0>
+  worker_int: <function WorkerInt.worker_int at 0x10fb07be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10fb07d00>
+  pre_exec: <function PreExec.pre_exec at 0x10fb07e20>
+  pre_request: <function PreRequest.pre_request at 0x10fb07f40>
+  post_request: <function PostRequest.post_request at 0x10fb24040>
+  child_exit: <function ChildExit.child_exit at 0x10fb24160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10fb24280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10fb243a0>
+  on_exit: <function OnExit.on_exit at 0x10fb244c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 13:44:51 +0800] [36068] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 13:44:51 +0800] [36068] [DEBUG] Arbiter booted
+[2022-01-20 13:44:51 +0800] [36068] [INFO] Listening at: http://0.0.0.0:9000 (36068)
+[2022-01-20 13:44:51 +0800] [36068] [INFO] Using worker: sync
+[2022-01-20 13:44:51 +0800] [36069] [INFO] Booting worker with pid: 36069
+[2022-01-20 13:44:51 +0800] [36070] [INFO] Booting worker with pid: 36070
+[2022-01-20 13:44:51 +0800] [36072] [INFO] Booting worker with pid: 36072
+[2022-01-20 13:44:51 +0800] [36068] [DEBUG] 3 workers
+[2022-01-20 13:44:58 +0800] [36072] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 13:44:58 +0800] [36072] [DEBUG] this is debug message
+[2022-01-20 13:44:58 +0800] [36072] [ERROR] this is error message
+[2022-01-20 13:44:58 +0800] [36072] [CRITICAL] this is critical message
+[2022-01-20 14:19:32 +0800] [40646] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: [%(asctime)s][%(filename)s][line:%(lineno)d][%(thread)d][%(levelname)s] %(message)s
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x104f13520>
+  on_reload: <function OnReload.on_reload at 0x104f13640>
+  when_ready: <function WhenReady.when_ready at 0x104f13760>
+  pre_fork: <function Prefork.pre_fork at 0x104f13880>
+  post_fork: <function Postfork.post_fork at 0x104f139a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x104f13ac0>
+  worker_int: <function WorkerInt.worker_int at 0x104f13be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x104f13d00>
+  pre_exec: <function PreExec.pre_exec at 0x104f13e20>
+  pre_request: <function PreRequest.pre_request at 0x104f13f40>
+  post_request: <function PostRequest.post_request at 0x104f30040>
+  child_exit: <function ChildExit.child_exit at 0x104f30160>
+  worker_exit: <function WorkerExit.worker_exit at 0x104f30280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x104f303a0>
+  on_exit: <function OnExit.on_exit at 0x104f304c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 14:19:32 +0800] [40646] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 14:19:45 +0800] [36069] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 14:19:45 +0800] [36069] [DEBUG] this is debug message
+[2022-01-20 14:19:45 +0800] [36069] [ERROR] this is error message
+[2022-01-20 14:19:45 +0800] [36069] [CRITICAL] this is critical message
+[2022-01-20 15:09:50 +0800] [47131] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x104c17520>
+  on_reload: <function OnReload.on_reload at 0x104c17640>
+  when_ready: <function WhenReady.when_ready at 0x104c17760>
+  pre_fork: <function Prefork.pre_fork at 0x104c17880>
+  post_fork: <function Postfork.post_fork at 0x104c179a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x104c17ac0>
+  worker_int: <function WorkerInt.worker_int at 0x104c17be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x104c17d00>
+  pre_exec: <function PreExec.pre_exec at 0x104c17e20>
+  pre_request: <function PreRequest.pre_request at 0x104c17f40>
+  post_request: <function PostRequest.post_request at 0x104c34040>
+  child_exit: <function ChildExit.child_exit at 0x104c34160>
+  worker_exit: <function WorkerExit.worker_exit at 0x104c34280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x104c343a0>
+  on_exit: <function OnExit.on_exit at 0x104c344c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:09:50 +0800] [47131] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:13:53 +0800] [47623] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x110693520>
+  on_reload: <function OnReload.on_reload at 0x110693640>
+  when_ready: <function WhenReady.when_ready at 0x110693760>
+  pre_fork: <function Prefork.pre_fork at 0x110693880>
+  post_fork: <function Postfork.post_fork at 0x1106939a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x110693ac0>
+  worker_int: <function WorkerInt.worker_int at 0x110693be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x110693d00>
+  pre_exec: <function PreExec.pre_exec at 0x110693e20>
+  pre_request: <function PreRequest.pre_request at 0x110693f40>
+  post_request: <function PostRequest.post_request at 0x1106b0040>
+  child_exit: <function ChildExit.child_exit at 0x1106b0160>
+  worker_exit: <function WorkerExit.worker_exit at 0x1106b0280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1106b03a0>
+  on_exit: <function OnExit.on_exit at 0x1106b04c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:13:53 +0800] [47623] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:13:53 +0800] [47623] [DEBUG] Arbiter booted
+[2022-01-20 15:13:53 +0800] [47623] [INFO] Listening at: http://0.0.0.0:9000 (47623)
+[2022-01-20 15:13:53 +0800] [47623] [INFO] Using worker: sync
+[2022-01-20 15:13:53 +0800] [47624] [INFO] Booting worker with pid: 47624
+[2022-01-20 15:13:53 +0800] [47625] [INFO] Booting worker with pid: 47625
+[2022-01-20 15:13:53 +0800] [47626] [INFO] Booting worker with pid: 47626
+[2022-01-20 15:13:53 +0800] [47623] [DEBUG] 3 workers
+[2022-01-20 15:13:55 +0800] [47625] [INFO] my info
+[2022-01-20 15:13:55 +0800] [47624] [INFO] my info
+[2022-01-20 15:13:55 +0800] [47626] [INFO] my info
+[2022-01-20 15:13:55 +0800] [47626] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:13:55 +0800] [47625] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:13:55 +0800] [47624] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:13:55 +0800] [47626] [INFO] Worker exiting (pid: 47626)
+[2022-01-20 15:13:55 +0800] [47625] [INFO] Worker exiting (pid: 47625)
+[2022-01-20 15:13:55 +0800] [47624] [INFO] Worker exiting (pid: 47624)
+[2022-01-20 15:14:25 +0800] [47623] [INFO] Shutting down: Master
+[2022-01-20 15:14:25 +0800] [47623] [INFO] Reason: Worker failed to boot.
+[2022-01-20 15:14:56 +0800] [47746] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10ed3f520>
+  on_reload: <function OnReload.on_reload at 0x10ed3f640>
+  when_ready: <function WhenReady.when_ready at 0x10ed3f760>
+  pre_fork: <function Prefork.pre_fork at 0x10ed3f880>
+  post_fork: <function Postfork.post_fork at 0x10ed3f9a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10ed3fac0>
+  worker_int: <function WorkerInt.worker_int at 0x10ed3fbe0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10ed3fd00>
+  pre_exec: <function PreExec.pre_exec at 0x10ed3fe20>
+  pre_request: <function PreRequest.pre_request at 0x10ed3ff40>
+  post_request: <function PostRequest.post_request at 0x10ed5c040>
+  child_exit: <function ChildExit.child_exit at 0x10ed5c160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10ed5c280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10ed5c3a0>
+  on_exit: <function OnExit.on_exit at 0x10ed5c4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:14:56 +0800] [47746] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:14:56 +0800] [47746] [DEBUG] Arbiter booted
+[2022-01-20 15:14:56 +0800] [47746] [INFO] Listening at: http://0.0.0.0:9000 (47746)
+[2022-01-20 15:14:56 +0800] [47746] [INFO] Using worker: sync
+[2022-01-20 15:14:56 +0800] [47747] [INFO] Booting worker with pid: 47747
+[2022-01-20 15:14:56 +0800] [47748] [INFO] Booting worker with pid: 47748
+[2022-01-20 15:14:56 +0800] [47749] [INFO] Booting worker with pid: 47749
+[2022-01-20 15:14:56 +0800] [47746] [DEBUG] 3 workers
+[2022-01-20 15:14:57 +0800] [47747] [INFO] my info
+[2022-01-20 15:14:57 +0800] [47747] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:14:57 +0800] [47747] [INFO] Worker exiting (pid: 47747)
+[2022-01-20 15:14:57 +0800] [47748] [INFO] my info
+[2022-01-20 15:14:57 +0800] [47748] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:14:57 +0800] [47748] [INFO] Worker exiting (pid: 47748)
+[2022-01-20 15:14:57 +0800] [47749] [INFO] my info
+[2022-01-20 15:14:57 +0800] [47749] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:14:57 +0800] [47749] [INFO] Worker exiting (pid: 47749)
+[2022-01-20 15:14:57 +0800] [47746] [WARNING] Worker with pid 47748 was terminated due to signal 15
+[2022-01-20 15:14:57 +0800] [47746] [WARNING] Worker with pid 47749 was terminated due to signal 15
+[2022-01-20 15:14:57 +0800] [47746] [INFO] Shutting down: Master
+[2022-01-20 15:14:57 +0800] [47746] [INFO] Reason: Worker failed to boot.
+[2022-01-20 15:15:42 +0800] [47873] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: False
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1099a7520>
+  on_reload: <function OnReload.on_reload at 0x1099a7640>
+  when_ready: <function WhenReady.when_ready at 0x1099a7760>
+  pre_fork: <function Prefork.pre_fork at 0x1099a7880>
+  post_fork: <function Postfork.post_fork at 0x1099a79a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1099a7ac0>
+  worker_int: <function WorkerInt.worker_int at 0x1099a7be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1099a7d00>
+  pre_exec: <function PreExec.pre_exec at 0x1099a7e20>
+  pre_request: <function PreRequest.pre_request at 0x1099a7f40>
+  post_request: <function PostRequest.post_request at 0x1099c4040>
+  child_exit: <function ChildExit.child_exit at 0x1099c4160>
+  worker_exit: <function WorkerExit.worker_exit at 0x1099c4280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1099c43a0>
+  on_exit: <function OnExit.on_exit at 0x1099c44c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:15:42 +0800] [47873] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:15:42 +0800] [47873] [DEBUG] Arbiter booted
+[2022-01-20 15:15:42 +0800] [47873] [INFO] Listening at: http://0.0.0.0:9000 (47873)
+[2022-01-20 15:15:42 +0800] [47873] [INFO] Using worker: sync
+[2022-01-20 15:15:42 +0800] [47874] [INFO] Booting worker with pid: 47874
+[2022-01-20 15:15:42 +0800] [47876] [INFO] Booting worker with pid: 47876
+[2022-01-20 15:15:42 +0800] [47877] [INFO] Booting worker with pid: 47877
+[2022-01-20 15:15:42 +0800] [47873] [DEBUG] 3 workers
+[2022-01-20 15:15:43 +0800] [47874] [INFO] my info
+[2022-01-20 15:15:43 +0800] [47874] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:15:43 +0800] [47874] [INFO] Worker exiting (pid: 47874)
+[2022-01-20 15:15:43 +0800] [47876] [INFO] my info
+[2022-01-20 15:15:43 +0800] [47877] [INFO] my info
+[2022-01-20 15:15:43 +0800] [47876] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:15:43 +0800] [47876] [INFO] Worker exiting (pid: 47876)
+[2022-01-20 15:15:43 +0800] [47877] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:15:43 +0800] [47877] [INFO] Worker exiting (pid: 47877)
+[2022-01-20 15:15:43 +0800] [47873] [WARNING] Worker with pid 47877 was terminated due to signal 15
+[2022-01-20 15:15:43 +0800] [47873] [WARNING] Worker with pid 47876 was terminated due to signal 15
+[2022-01-20 15:15:43 +0800] [47873] [INFO] Shutting down: Master
+[2022-01-20 15:15:43 +0800] [47873] [INFO] Reason: Worker failed to boot.
+[2022-01-20 15:16:51 +0800] [48033] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: False
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x109e43520>
+  on_reload: <function OnReload.on_reload at 0x109e43640>
+  when_ready: <function WhenReady.when_ready at 0x109e43760>
+  pre_fork: <function Prefork.pre_fork at 0x109e43880>
+  post_fork: <function Postfork.post_fork at 0x109e439a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x109e43ac0>
+  worker_int: <function WorkerInt.worker_int at 0x109e43be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x109e43d00>
+  pre_exec: <function PreExec.pre_exec at 0x109e43e20>
+  pre_request: <function PreRequest.pre_request at 0x109e43f40>
+  post_request: <function PostRequest.post_request at 0x109e60040>
+  child_exit: <function ChildExit.child_exit at 0x109e60160>
+  worker_exit: <function WorkerExit.worker_exit at 0x109e60280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x109e603a0>
+  on_exit: <function OnExit.on_exit at 0x109e604c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:16:51 +0800] [48033] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:16:51 +0800] [48033] [DEBUG] Arbiter booted
+[2022-01-20 15:16:51 +0800] [48033] [INFO] Listening at: http://0.0.0.0:9000 (48033)
+[2022-01-20 15:16:51 +0800] [48033] [INFO] Using worker: sync
+[2022-01-20 15:16:51 +0800] [48034] [INFO] Booting worker with pid: 48034
+[2022-01-20 15:16:51 +0800] [48035] [INFO] Booting worker with pid: 48035
+[2022-01-20 15:16:51 +0800] [48036] [INFO] Booting worker with pid: 48036
+[2022-01-20 15:16:51 +0800] [48033] [DEBUG] 3 workers
+[2022-01-20 15:16:53 +0800] [48035] [INFO] my info
+[2022-01-20 15:16:53 +0800] [48034] [INFO] my info
+[2022-01-20 15:16:53 +0800] [48036] [INFO] my info
+[2022-01-20 15:16:53 +0800] [48035] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:16:53 +0800] [48036] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:16:53 +0800] [48034] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/view.py", line 2072, in <module>
+    app.logger.info('my info')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1468, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+    self.handle(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+    self.callHandlers(record)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1686, in callHandlers
+    if record.levelno >= hdlr.level:
+AttributeError: 'str' object has no attribute 'level'
+[2022-01-20 15:16:53 +0800] [48035] [INFO] Worker exiting (pid: 48035)
+[2022-01-20 15:16:53 +0800] [48036] [INFO] Worker exiting (pid: 48036)
+[2022-01-20 15:16:53 +0800] [48034] [INFO] Worker exiting (pid: 48034)
+[2022-01-20 15:17:23 +0800] [48033] [INFO] Shutting down: Master
+[2022-01-20 15:17:23 +0800] [48033] [INFO] Reason: Worker failed to boot.
+[2022-01-20 15:18:05 +0800] [48245] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: False
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1070ff520>
+  on_reload: <function OnReload.on_reload at 0x1070ff640>
+  when_ready: <function WhenReady.when_ready at 0x1070ff760>
+  pre_fork: <function Prefork.pre_fork at 0x1070ff880>
+  post_fork: <function Postfork.post_fork at 0x1070ff9a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1070ffac0>
+  worker_int: <function WorkerInt.worker_int at 0x1070ffbe0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1070ffd00>
+  pre_exec: <function PreExec.pre_exec at 0x1070ffe20>
+  pre_request: <function PreRequest.pre_request at 0x1070fff40>
+  post_request: <function PostRequest.post_request at 0x10711c040>
+  child_exit: <function ChildExit.child_exit at 0x10711c160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10711c280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10711c3a0>
+  on_exit: <function OnExit.on_exit at 0x10711c4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:18:05 +0800] [48245] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:18:05 +0800] [48245] [DEBUG] Arbiter booted
+[2022-01-20 15:18:05 +0800] [48245] [INFO] Listening at: http://0.0.0.0:9000 (48245)
+[2022-01-20 15:18:05 +0800] [48245] [INFO] Using worker: sync
+[2022-01-20 15:18:05 +0800] [48246] [INFO] Booting worker with pid: 48246
+[2022-01-20 15:18:05 +0800] [48247] [INFO] Booting worker with pid: 48247
+[2022-01-20 15:18:05 +0800] [48248] [INFO] Booting worker with pid: 48248
+[2022-01-20 15:18:05 +0800] [48245] [DEBUG] 3 workers
+[2022-01-20 15:18:07 +0800] [48247] [INFO] my info
+[2022-01-20 15:18:07 +0800] [48246] [INFO] my info
+[2022-01-20 15:18:07 +0800] [48248] [INFO] my info
+[2022-01-20 15:18:07 +0800] [48247] [DEBUG] debug message
+[2022-01-20 15:18:07 +0800] [48246] [DEBUG] debug message
+[2022-01-20 15:18:07 +0800] [48248] [DEBUG] debug message
+[2022-01-20 15:18:10 +0800] [48248] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:18:10,575] DEBUG in view: this is debug message
+[2022-01-20 15:18:10 +0800] [48248] [DEBUG] this is debug message
+[2022-01-20 15:18:10,576] ERROR in view: this is error message
+[2022-01-20 15:18:10 +0800] [48248] [ERROR] this is error message
+[2022-01-20 15:18:10,577] CRITICAL in view: this is critical message
+[2022-01-20 15:18:10 +0800] [48248] [CRITICAL] this is critical message
+127.0.0.1 - - [20/Jan/2022:15:18:22 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:18:27 +0800] [48247] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:18:27,497] DEBUG in view: this is debug message
+[2022-01-20 15:18:27 +0800] [48247] [DEBUG] this is debug message
+[2022-01-20 15:18:27,498] ERROR in view: this is error message
+[2022-01-20 15:18:27 +0800] [48247] [ERROR] this is error message
+[2022-01-20 15:18:27,499] CRITICAL in view: this is critical message
+[2022-01-20 15:18:27 +0800] [48247] [CRITICAL] this is critical message
+127.0.0.1 - - [20/Jan/2022:15:18:37 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:18:43 +0800] [48245] [INFO] Handling signal: int
+[2022-01-20 15:18:43 +0800] [48247] [INFO] Worker exiting (pid: 48247)
+[2022-01-20 15:18:43 +0800] [48248] [INFO] Worker exiting (pid: 48248)
+[2022-01-20 15:18:43 +0800] [48246] [INFO] Worker exiting (pid: 48246)
+[2022-01-20 15:18:43 +0800] [48245] [INFO] Shutting down: Master
+[2022-01-20 15:19:03 +0800] [48364] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1051b7520>
+  on_reload: <function OnReload.on_reload at 0x1051b7640>
+  when_ready: <function WhenReady.when_ready at 0x1051b7760>
+  pre_fork: <function Prefork.pre_fork at 0x1051b7880>
+  post_fork: <function Postfork.post_fork at 0x1051b79a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1051b7ac0>
+  worker_int: <function WorkerInt.worker_int at 0x1051b7be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1051b7d00>
+  pre_exec: <function PreExec.pre_exec at 0x1051b7e20>
+  pre_request: <function PreRequest.pre_request at 0x1051b7f40>
+  post_request: <function PostRequest.post_request at 0x1051d4040>
+  child_exit: <function ChildExit.child_exit at 0x1051d4160>
+  worker_exit: <function WorkerExit.worker_exit at 0x1051d4280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1051d43a0>
+  on_exit: <function OnExit.on_exit at 0x1051d44c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:19:03 +0800] [48364] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:19:03 +0800] [48364] [DEBUG] Arbiter booted
+[2022-01-20 15:19:03 +0800] [48364] [INFO] Listening at: http://0.0.0.0:9000 (48364)
+[2022-01-20 15:19:03 +0800] [48364] [INFO] Using worker: sync
+[2022-01-20 15:19:03 +0800] [48365] [INFO] Booting worker with pid: 48365
+[2022-01-20 15:19:03 +0800] [48366] [INFO] Booting worker with pid: 48366
+[2022-01-20 15:19:03 +0800] [48367] [INFO] Booting worker with pid: 48367
+[2022-01-20 15:19:03 +0800] [48364] [DEBUG] 3 workers
+[2022-01-20 15:19:05 +0800] [48367] [INFO] my info
+[2022-01-20 15:19:05 +0800] [48366] [INFO] my info
+[2022-01-20 15:19:05 +0800] [48365] [INFO] my info
+[2022-01-20 15:19:05 +0800] [48367] [DEBUG] debug message
+[2022-01-20 15:19:05 +0800] [48366] [DEBUG] debug message
+[2022-01-20 15:19:05 +0800] [48365] [DEBUG] debug message
+[2022-01-20 15:19:13 +0800] [48365] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:19:13,772] DEBUG in view: this is debug message
+[2022-01-20 15:19:13 +0800] [48365] [DEBUG] this is debug message
+[2022-01-20 15:19:13,772] ERROR in view: this is error message
+[2022-01-20 15:19:13 +0800] [48365] [ERROR] this is error message
+[2022-01-20 15:19:13,773] CRITICAL in view: this is critical message
+[2022-01-20 15:19:13 +0800] [48365] [CRITICAL] this is critical message
+127.0.0.1 - - [20/Jan/2022:15:19:21 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:19:26 +0800] [48367] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:19:26,270] DEBUG in view: this is debug message
+[2022-01-20 15:19:26 +0800] [48367] [DEBUG] this is debug message
+[2022-01-20 15:19:26,271] ERROR in view: this is error message
+[2022-01-20 15:19:26 +0800] [48367] [ERROR] this is error message
+[2022-01-20 15:19:26,272] CRITICAL in view: this is critical message
+[2022-01-20 15:19:26 +0800] [48367] [CRITICAL] this is critical message
+127.0.0.1 - - [20/Jan/2022:15:19:32 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:20:08 +0800] [48365] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:20:08,072] DEBUG in view: this is debug message
+[2022-01-20 15:20:08 +0800] [48365] [DEBUG] this is debug message
+[2022-01-20 15:20:08,073] ERROR in view: this is error message
+[2022-01-20 15:20:08 +0800] [48365] [ERROR] this is error message
+[2022-01-20 15:20:08,073] CRITICAL in view: this is critical message
+[2022-01-20 15:20:08 +0800] [48365] [CRITICAL] this is critical message
+127.0.0.1 - - [20/Jan/2022:15:20:16 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:26:49 +0800] [49310] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: True
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10aceb520>
+  on_reload: <function OnReload.on_reload at 0x10aceb640>
+  when_ready: <function WhenReady.when_ready at 0x10aceb760>
+  pre_fork: <function Prefork.pre_fork at 0x10aceb880>
+  post_fork: <function Postfork.post_fork at 0x10aceb9a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10acebac0>
+  worker_int: <function WorkerInt.worker_int at 0x10acebbe0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10acebd00>
+  pre_exec: <function PreExec.pre_exec at 0x10acebe20>
+  pre_request: <function PreRequest.pre_request at 0x10acebf40>
+  post_request: <function PostRequest.post_request at 0x10ad08040>
+  child_exit: <function ChildExit.child_exit at 0x10ad08160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10ad08280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10ad083a0>
+  on_exit: <function OnExit.on_exit at 0x10ad084c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:26:49 +0800] [49310] [INFO] Starting gunicorn 20.1.0
+
+Error: Already running on PID 48364 (or pid file 'logs/gunicorn.pid' is stale)
+
+[2022-01-20 15:27:04 +0800] [48365] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:27:04,669] DEBUG in view: this is debug message
+[2022-01-20 15:27:04 +0800] [48365] [DEBUG] this is debug message
+[2022-01-20 15:27:04,671] ERROR in view: this is error message
+[2022-01-20 15:27:04 +0800] [48365] [ERROR] this is error message
+[2022-01-20 15:27:04,672] CRITICAL in view: this is critical message
+[2022-01-20 15:27:04 +0800] [48365] [CRITICAL] this is critical message
+127.0.0.1 - - [20/Jan/2022:15:27:11 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:28:27 +0800] [49495] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: False
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: True
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10acf3520>
+  on_reload: <function OnReload.on_reload at 0x10acf3640>
+  when_ready: <function WhenReady.when_ready at 0x10acf3760>
+  pre_fork: <function Prefork.pre_fork at 0x10acf3880>
+  post_fork: <function Postfork.post_fork at 0x10acf39a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10acf3ac0>
+  worker_int: <function WorkerInt.worker_int at 0x10acf3be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10acf3d00>
+  pre_exec: <function PreExec.pre_exec at 0x10acf3e20>
+  pre_request: <function PreRequest.pre_request at 0x10acf3f40>
+  post_request: <function PostRequest.post_request at 0x10ad10040>
+  child_exit: <function ChildExit.child_exit at 0x10ad10160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10ad10280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10ad103a0>
+  on_exit: <function OnExit.on_exit at 0x10ad104c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:28:27 +0800] [49495] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:28:27 +0800] [49495] [DEBUG] Arbiter booted
+[2022-01-20 15:28:27 +0800] [49495] [INFO] Listening at: http://0.0.0.0:9000 (49495)
+[2022-01-20 15:28:27 +0800] [49495] [INFO] Using worker: sync
+[2022-01-20 15:28:27 +0800] [49496] [INFO] Booting worker with pid: 49496
+[2022-01-20 15:28:27 +0800] [49497] [INFO] Booting worker with pid: 49497
+[2022-01-20 15:28:28 +0800] [49498] [INFO] Booting worker with pid: 49498
+[2022-01-20 15:28:28 +0800] [49495] [DEBUG] 3 workers
+/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/biz/Archivelog.py:5: FutureWarning: The pandas.np module is deprecated and will be removed from pandas in a future version. Import numpy directly instead
+  from pandas import np
+/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/biz/Archivelog.py:5: FutureWarning: The pandas.np module is deprecated and will be removed from pandas in a future version. Import numpy directly instead
+  from pandas import np
+/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/biz/Archivelog.py:5: FutureWarning: The pandas.np module is deprecated and will be removed from pandas in a future version. Import numpy directly instead
+  from pandas import np
+/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/dao/vo/auditvo.py:25: SAWarning: Attribute 'serial_id' on class <class 'dao.vo.auditvo.DBSessionVO'> appears to be a non-schema 'sqlalchemy.sql.column()' object; this won't be part of the declarative mapping
+  class DBSessionVO(Base):
+/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/dao/vo/auditvo.py:25: SAWarning: Attribute 'serial_id' on class <class 'dao.vo.auditvo.DBSessionVO'> appears to be a non-schema 'sqlalchemy.sql.column()' object; this won't be part of the declarative mapping
+  class DBSessionVO(Base):
+/Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv/dao/vo/auditvo.py:25: SAWarning: Attribute 'serial_id' on class <class 'dao.vo.auditvo.DBSessionVO'> appears to be a non-schema 'sqlalchemy.sql.column()' object; this won't be part of the declarative mapping
+  class DBSessionVO(Base):
+[2022-01-20 15:28:37 +0800] [49495] [INFO] Handling signal: int
+[2022-01-20 15:28:38 +0800] [49496] [INFO] Worker exiting (pid: 49496)
+[2022-01-20 15:28:38 +0800] [49497] [INFO] Worker exiting (pid: 49497)
+[2022-01-20 15:28:38 +0800] [49498] [INFO] Worker exiting (pid: 49498)
+[2022-01-20 15:28:38 +0800] [49495] [INFO] Shutting down: Master
+[2022-01-20 15:40:22 +0800] [50976] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: False
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10170b520>
+  on_reload: <function OnReload.on_reload at 0x10170b640>
+  when_ready: <function WhenReady.when_ready at 0x10170b760>
+  pre_fork: <function Prefork.pre_fork at 0x10170b880>
+  post_fork: <function Postfork.post_fork at 0x10170b9a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10170bac0>
+  worker_int: <function WorkerInt.worker_int at 0x10170bbe0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10170bd00>
+  pre_exec: <function PreExec.pre_exec at 0x10170be20>
+  pre_request: <function PreRequest.pre_request at 0x10170bf40>
+  post_request: <function PostRequest.post_request at 0x101728040>
+  child_exit: <function ChildExit.child_exit at 0x101728160>
+  worker_exit: <function WorkerExit.worker_exit at 0x101728280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1017283a0>
+  on_exit: <function OnExit.on_exit at 0x1017284c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:40:22 +0800] [50976] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:40:22 +0800] [50976] [DEBUG] Arbiter booted
+[2022-01-20 15:40:22 +0800] [50976] [INFO] Listening at: http://0.0.0.0:9000 (50976)
+[2022-01-20 15:40:22 +0800] [50976] [INFO] Using worker: sync
+[2022-01-20 15:40:22 +0800] [50977] [INFO] Booting worker with pid: 50977
+[2022-01-20 15:40:22 +0800] [50978] [INFO] Booting worker with pid: 50978
+[2022-01-20 15:40:22 +0800] [50979] [INFO] Booting worker with pid: 50979
+[2022-01-20 15:40:22 +0800] [50976] [DEBUG] 3 workers
+[2022-01-20 15:40:31 +0800] [50978] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:40:31 +0800] [50978] [DEBUG] this is a DEBUG message
+[2022-01-20 15:40:31 +0800] [50978] [INFO] this is an INFO message
+[2022-01-20 15:40:31 +0800] [50978] [WARNING] this is a WARNING message
+[2022-01-20 15:40:31 +0800] [50978] [ERROR] this is an ERROR message
+[2022-01-20 15:40:31 +0800] [50978] [CRITICAL] this is a CRITICAL message
+127.0.0.1 - - [20/Jan/2022:15:40:48 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:40:54 +0800] [50977] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:40:54 +0800] [50977] [DEBUG] this is a DEBUG message
+[2022-01-20 15:40:54 +0800] [50977] [INFO] this is an INFO message
+[2022-01-20 15:40:54 +0800] [50977] [WARNING] this is a WARNING message
+[2022-01-20 15:40:54 +0800] [50977] [ERROR] this is an ERROR message
+[2022-01-20 15:40:54 +0800] [50977] [CRITICAL] this is a CRITICAL message
+127.0.0.1 - - [20/Jan/2022:15:41:01 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:41:07 +0800] [50976] [INFO] Handling signal: int
+[2022-01-20 15:41:07 +0800] [50979] [INFO] Worker exiting (pid: 50979)
+[2022-01-20 15:41:07 +0800] [50978] [INFO] Worker exiting (pid: 50978)
+[2022-01-20 15:41:07 +0800] [50977] [INFO] Worker exiting (pid: 50977)
+[2022-01-20 15:41:07 +0800] [50976] [INFO] Shutting down: Master
+[2022-01-20 15:42:21 +0800] [51232] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x105b13520>
+  on_reload: <function OnReload.on_reload at 0x105b13640>
+  when_ready: <function WhenReady.when_ready at 0x105b13760>
+  pre_fork: <function Prefork.pre_fork at 0x105b13880>
+  post_fork: <function Postfork.post_fork at 0x105b139a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x105b13ac0>
+  worker_int: <function WorkerInt.worker_int at 0x105b13be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x105b13d00>
+  pre_exec: <function PreExec.pre_exec at 0x105b13e20>
+  pre_request: <function PreRequest.pre_request at 0x105b13f40>
+  post_request: <function PostRequest.post_request at 0x105b30040>
+  child_exit: <function ChildExit.child_exit at 0x105b30160>
+  worker_exit: <function WorkerExit.worker_exit at 0x105b30280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x105b303a0>
+  on_exit: <function OnExit.on_exit at 0x105b304c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:42:21 +0800] [51232] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:42:21 +0800] [51232] [DEBUG] Arbiter booted
+[2022-01-20 15:42:21 +0800] [51232] [INFO] Listening at: http://0.0.0.0:9000 (51232)
+[2022-01-20 15:42:21 +0800] [51232] [INFO] Using worker: sync
+[2022-01-20 15:42:21 +0800] [51233] [INFO] Booting worker with pid: 51233
+[2022-01-20 15:42:21 +0800] [51234] [INFO] Booting worker with pid: 51234
+[2022-01-20 15:42:21 +0800] [51235] [INFO] Booting worker with pid: 51235
+[2022-01-20 15:42:21 +0800] [51232] [DEBUG] 3 workers
+[2022-01-20 15:42:29 +0800] [51235] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:42:29 +0800] [51235] [DEBUG] this is a DEBUG message
+[2022-01-20 15:42:29 +0800] [51235] [INFO] this is an INFO message
+[2022-01-20 15:42:29 +0800] [51235] [WARNING] this is a WARNING message
+[2022-01-20 15:42:29 +0800] [51235] [ERROR] this is an ERROR message
+[2022-01-20 15:42:29 +0800] [51235] [CRITICAL] this is a CRITICAL message
+127.0.0.1 - - [20/Jan/2022:15:42:38 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:42:52 +0800] [51233] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:42:52 +0800] [51233] [DEBUG] this is a DEBUG message
+[2022-01-20 15:42:52 +0800] [51233] [INFO] this is an INFO message
+[2022-01-20 15:42:52 +0800] [51233] [WARNING] this is a WARNING message
+[2022-01-20 15:42:52 +0800] [51233] [ERROR] this is an ERROR message
+[2022-01-20 15:42:52 +0800] [51233] [CRITICAL] this is a CRITICAL message
+127.0.0.1 - - [20/Jan/2022:15:42:59 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:43:02 +0800] [51234] [DEBUG] POST /api/getAuthorizationForMA
+[2022-01-20 15:43:02 +0800] [51234] [DEBUG] this is a DEBUG message
+[2022-01-20 15:43:02 +0800] [51234] [INFO] this is an INFO message
+[2022-01-20 15:43:02 +0800] [51234] [WARNING] this is a WARNING message
+[2022-01-20 15:43:02 +0800] [51234] [ERROR] this is an ERROR message
+[2022-01-20 15:43:02 +0800] [51234] [CRITICAL] this is a CRITICAL message
+127.0.0.1 - - [20/Jan/2022:15:43:12 +0800] "POST /api/getAuthorizationForMA HTTP/1.1" 200 216 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:50:57 +0800] [52393] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 25
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: False
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10630f520>
+  on_reload: <function OnReload.on_reload at 0x10630f640>
+  when_ready: <function WhenReady.when_ready at 0x10630f760>
+  pre_fork: <function Prefork.pre_fork at 0x10630f880>
+  post_fork: <function Postfork.post_fork at 0x10630f9a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10630fac0>
+  worker_int: <function WorkerInt.worker_int at 0x10630fbe0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10630fd00>
+  pre_exec: <function PreExec.pre_exec at 0x10630fe20>
+  pre_request: <function PreRequest.pre_request at 0x10630ff40>
+  post_request: <function PostRequest.post_request at 0x10632c040>
+  child_exit: <function ChildExit.child_exit at 0x10632c160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10632c280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10632c3a0>
+  on_exit: <function OnExit.on_exit at 0x10632c4c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:50:57 +0800] [52393] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:50:57 +0800] [52393] [DEBUG] Arbiter booted
+[2022-01-20 15:50:57 +0800] [52393] [INFO] Listening at: http://0.0.0.0:9000 (52393)
+[2022-01-20 15:50:57 +0800] [52393] [INFO] Using worker: sync
+[2022-01-20 15:50:57 +0800] [52395] [INFO] Booting worker with pid: 52395
+[2022-01-20 15:50:57 +0800] [52396] [INFO] Booting worker with pid: 52396
+[2022-01-20 15:50:57 +0800] [52397] [INFO] Booting worker with pid: 52397
+[2022-01-20 15:50:57 +0800] [52398] [INFO] Booting worker with pid: 52398
+[2022-01-20 15:50:57 +0800] [52399] [INFO] Booting worker with pid: 52399
+[2022-01-20 15:50:57 +0800] [52400] [INFO] Booting worker with pid: 52400
+[2022-01-20 15:50:57 +0800] [52401] [INFO] Booting worker with pid: 52401
+[2022-01-20 15:50:57 +0800] [52402] [INFO] Booting worker with pid: 52402
+[2022-01-20 15:50:57 +0800] [52403] [INFO] Booting worker with pid: 52403
+[2022-01-20 15:50:57 +0800] [52404] [INFO] Booting worker with pid: 52404
+[2022-01-20 15:50:57 +0800] [52405] [INFO] Booting worker with pid: 52405
+[2022-01-20 15:50:57 +0800] [52406] [INFO] Booting worker with pid: 52406
+[2022-01-20 15:50:57 +0800] [52407] [INFO] Booting worker with pid: 52407
+[2022-01-20 15:50:57 +0800] [52408] [INFO] Booting worker with pid: 52408
+[2022-01-20 15:50:57 +0800] [52409] [INFO] Booting worker with pid: 52409
+[2022-01-20 15:50:57 +0800] [52410] [INFO] Booting worker with pid: 52410
+[2022-01-20 15:50:58 +0800] [52411] [INFO] Booting worker with pid: 52411
+[2022-01-20 15:50:58 +0800] [52412] [INFO] Booting worker with pid: 52412
+[2022-01-20 15:50:58 +0800] [52413] [INFO] Booting worker with pid: 52413
+[2022-01-20 15:50:58 +0800] [52414] [INFO] Booting worker with pid: 52414
+[2022-01-20 15:50:58 +0800] [52415] [INFO] Booting worker with pid: 52415
+[2022-01-20 15:50:58 +0800] [52416] [INFO] Booting worker with pid: 52416
+[2022-01-20 15:50:58 +0800] [52417] [INFO] Booting worker with pid: 52417
+[2022-01-20 15:50:58 +0800] [52418] [INFO] Booting worker with pid: 52418
+[2022-01-20 15:50:58 +0800] [52419] [INFO] Booting worker with pid: 52419
+[2022-01-20 15:50:58 +0800] [52393] [DEBUG] 25 workers
+[2022-01-20 15:51:05 +0800] [52393] [INFO] Handling signal: int
+[2022-01-20 15:51:05 +0800] [52415] [INFO] Worker exiting (pid: 52415)
+[2022-01-20 15:51:05 +0800] [52419] [INFO] Worker exiting (pid: 52419)
+[2022-01-20 15:51:05 +0800] [52411] [INFO] Worker exiting (pid: 52411)
+[2022-01-20 15:51:05 +0800] [52409] [INFO] Worker exiting (pid: 52409)
+[2022-01-20 15:51:05 +0800] [52410] [INFO] Worker exiting (pid: 52410)
+[2022-01-20 15:51:05 +0800] [52412] [INFO] Worker exiting (pid: 52412)
+[2022-01-20 15:51:05 +0800] [52404] [INFO] Worker exiting (pid: 52404)
+[2022-01-20 15:51:05 +0800] [52417] [INFO] Worker exiting (pid: 52417)
+[2022-01-20 15:51:05 +0800] [52418] [INFO] Worker exiting (pid: 52418)
+[2022-01-20 15:51:05 +0800] [52408] [INFO] Worker exiting (pid: 52408)
+[2022-01-20 15:51:05 +0800] [52403] [INFO] Worker exiting (pid: 52403)
+[2022-01-20 15:51:05 +0800] [52416] [INFO] Worker exiting (pid: 52416)
+[2022-01-20 15:51:05 +0800] [52406] [INFO] Worker exiting (pid: 52406)
+[2022-01-20 15:51:05 +0800] [52414] [INFO] Worker exiting (pid: 52414)
+[2022-01-20 15:51:05 +0800] [52402] [INFO] Worker exiting (pid: 52402)
+[2022-01-20 15:51:05 +0800] [52400] [INFO] Worker exiting (pid: 52400)
+[2022-01-20 15:51:05 +0800] [52401] [INFO] Worker exiting (pid: 52401)
+[2022-01-20 15:51:05 +0800] [52405] [INFO] Worker exiting (pid: 52405)
+[2022-01-20 15:51:05 +0800] [52413] [INFO] Worker exiting (pid: 52413)
+[2022-01-20 15:51:05 +0800] [52407] [INFO] Worker exiting (pid: 52407)
+[2022-01-20 15:51:05 +0800] [52399] [INFO] Worker exiting (pid: 52399)
+[2022-01-20 15:51:05 +0800] [52398] [INFO] Worker exiting (pid: 52398)
+[2022-01-20 15:51:05 +0800] [52396] [INFO] Worker exiting (pid: 52396)
+[2022-01-20 15:51:05 +0800] [52397] [INFO] Worker exiting (pid: 52397)
+[2022-01-20 15:51:05 +0800] [52395] [INFO] Worker exiting (pid: 52395)
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52412 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52411 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52409 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52407 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52406 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52405 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52404 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52403 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52402 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52401 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52400 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52399 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52398 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52397 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52396 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52395 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52408 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52410 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52413 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52417 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52415 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52416 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52414 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52418 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [WARNING] Worker with pid 52419 was terminated due to signal 2
+[2022-01-20 15:51:07 +0800] [52393] [INFO] Shutting down: Master
+[2022-01-20 15:51:13 +0800] [52427] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: False
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10f92b520>
+  on_reload: <function OnReload.on_reload at 0x10f92b640>
+  when_ready: <function WhenReady.when_ready at 0x10f92b760>
+  pre_fork: <function Prefork.pre_fork at 0x10f92b880>
+  post_fork: <function Postfork.post_fork at 0x10f92b9a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10f92bac0>
+  worker_int: <function WorkerInt.worker_int at 0x10f92bbe0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10f92bd00>
+  pre_exec: <function PreExec.pre_exec at 0x10f92be20>
+  pre_request: <function PreRequest.pre_request at 0x10f92bf40>
+  post_request: <function PostRequest.post_request at 0x10f948040>
+  child_exit: <function ChildExit.child_exit at 0x10f948160>
+  worker_exit: <function WorkerExit.worker_exit at 0x10f948280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10f9483a0>
+  on_exit: <function OnExit.on_exit at 0x10f9484c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:51:13 +0800] [52427] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:51:13 +0800] [52427] [DEBUG] Arbiter booted
+[2022-01-20 15:51:13 +0800] [52427] [INFO] Listening at: http://0.0.0.0:9000 (52427)
+[2022-01-20 15:51:13 +0800] [52427] [INFO] Using worker: sync
+[2022-01-20 15:51:13 +0800] [52429] [INFO] Booting worker with pid: 52429
+[2022-01-20 15:51:13 +0800] [52430] [INFO] Booting worker with pid: 52430
+[2022-01-20 15:51:13 +0800] [52431] [INFO] Booting worker with pid: 52431
+[2022-01-20 15:51:13 +0800] [52427] [DEBUG] 3 workers
+[2022-01-20 15:55:32 +0800] [52431] [DEBUG] POST /api/getDBTns
+127.0.0.1 - app [20/Jan/2022:15:55:34 +0800] "POST /api/getDBTns HTTP/1.1" 302 262 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:55:46 +0800] [52427] [INFO] Handling signal: int
+[2022-01-20 15:55:46 +0800] [52429] [INFO] Worker exiting (pid: 52429)
+[2022-01-20 15:55:46 +0800] [52430] [INFO] Worker exiting (pid: 52430)
+[2022-01-20 15:55:46 +0800] [52431] [INFO] Worker exiting (pid: 52431)
+[2022-01-20 15:55:47 +0800] [52427] [INFO] Shutting down: Master
+[2022-01-20 15:55:48 +0800] [52980] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: False
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x106b5b520>
+  on_reload: <function OnReload.on_reload at 0x106b5b640>
+  when_ready: <function WhenReady.when_ready at 0x106b5b760>
+  pre_fork: <function Prefork.pre_fork at 0x106b5b880>
+  post_fork: <function Postfork.post_fork at 0x106b5b9a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x106b5bac0>
+  worker_int: <function WorkerInt.worker_int at 0x106b5bbe0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x106b5bd00>
+  pre_exec: <function PreExec.pre_exec at 0x106b5be20>
+  pre_request: <function PreRequest.pre_request at 0x106b5bf40>
+  post_request: <function PostRequest.post_request at 0x106b78040>
+  child_exit: <function ChildExit.child_exit at 0x106b78160>
+  worker_exit: <function WorkerExit.worker_exit at 0x106b78280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x106b783a0>
+  on_exit: <function OnExit.on_exit at 0x106b784c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:55:48 +0800] [52980] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:55:48 +0800] [52980] [DEBUG] Arbiter booted
+[2022-01-20 15:55:48 +0800] [52980] [INFO] Listening at: http://0.0.0.0:9000 (52980)
+[2022-01-20 15:55:48 +0800] [52980] [INFO] Using worker: sync
+[2022-01-20 15:55:48 +0800] [52981] [INFO] Booting worker with pid: 52981
+[2022-01-20 15:55:48 +0800] [52982] [INFO] Booting worker with pid: 52982
+[2022-01-20 15:55:48 +0800] [52983] [INFO] Booting worker with pid: 52983
+[2022-01-20 15:55:49 +0800] [52980] [DEBUG] 3 workers
+[2022-01-20 15:55:52 +0800] [52982] [DEBUG] POST /api/getDBTns
+127.0.0.1 - app [20/Jan/2022:15:55:58 +0800] "POST /api/getDBTns HTTP/1.1" 302 262 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:56:41 +0800] [52981] [DEBUG] POST /api/getDBTns
+127.0.0.1 - app [20/Jan/2022:15:56:46 +0800] "POST /api/getDBTns HTTP/1.1" 302 262 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+[2022-01-20 15:56:48 +0800] [52980] [INFO] Handling signal: int
+[2022-01-20 15:56:48 +0800] [52983] [INFO] Worker exiting (pid: 52983)
+[2022-01-20 15:56:48 +0800] [52981] [INFO] Worker exiting (pid: 52981)
+[2022-01-20 15:56:48 +0800] [52982] [INFO] Worker exiting (pid: 52982)
+[2022-01-20 15:56:48 +0800] [52980] [INFO] Shutting down: Master
+[2022-01-20 15:57:07 +0800] [53127] [DEBUG] Current configuration:
+  config: gunicorn_cfg.py
+  wsgi_app: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/lexing/Documents/ciscoGithub/CCP/WebexTestEnv
+  daemon: True
+  raw_env: []
+  pidfile: logs/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: logs/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: logs/access.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: view:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x101d33520>
+  on_reload: <function OnReload.on_reload at 0x101d33640>
+  when_ready: <function WhenReady.when_ready at 0x101d33760>
+  pre_fork: <function Prefork.pre_fork at 0x101d33880>
+  post_fork: <function Postfork.post_fork at 0x101d339a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x101d33ac0>
+  worker_int: <function WorkerInt.worker_int at 0x101d33be0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x101d33d00>
+  pre_exec: <function PreExec.pre_exec at 0x101d33e20>
+  pre_request: <function PreRequest.pre_request at 0x101d33f40>
+  post_request: <function PostRequest.post_request at 0x101d50040>
+  child_exit: <function ChildExit.child_exit at 0x101d50160>
+  worker_exit: <function WorkerExit.worker_exit at 0x101d50280>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x101d503a0>
+  on_exit: <function OnExit.on_exit at 0x101d504c0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-01-20 15:57:07 +0800] [53127] [INFO] Starting gunicorn 20.1.0
+[2022-01-20 15:57:07 +0800] [53127] [DEBUG] Arbiter booted
+[2022-01-20 15:57:07 +0800] [53127] [INFO] Listening at: http://0.0.0.0:9000 (53127)
+[2022-01-20 15:57:07 +0800] [53127] [INFO] Using worker: sync
+[2022-01-20 15:57:07 +0800] [53128] [INFO] Booting worker with pid: 53128
+[2022-01-20 15:57:07 +0800] [53129] [INFO] Booting worker with pid: 53129
+[2022-01-20 15:57:07 +0800] [53130] [INFO] Booting worker with pid: 53130
+[2022-01-20 15:57:07 +0800] [53127] [DEBUG] 3 workers
+[2022-01-20 15:57:22 +0800] [53130] [DEBUG] POST /api/getDBTns
+127.0.0.1 - app [20/Jan/2022:15:57:26 +0800] "POST /api/getDBTns HTTP/1.1" 302 262 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"

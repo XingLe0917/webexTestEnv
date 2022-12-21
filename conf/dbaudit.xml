@@ -1,0 +1,792 @@
+<DatabaseAudit name="RACSYMMP" description="" version="19.0.0.0.0">
+    <OS>
+        <!--OS 1-->
+        <templete id="1bd216d564ed4d50974dd134bc3320dd" >
+            <title>check private network value</title>
+            <command>
+                <![CDATA[source /home/oracle/.bash_profile;for i in `oifcfg getif| grep "cluster_interconnect"|awk '{print $1}'`;do file="/proc/sys/net/ipv4/conf/$i/rp_filter";echo $file"|+|"`cat $file`;done ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if str(item.split("|+|")[1])!="0":&#x000A;&#x0009;&#x0009;status="False"
+            </threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if str(row.split("|+|")[1])!="0":&#x000A;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+"0"+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 2-->
+        <templete id="ec7186eb96814f2dbc83e756b79d3063" >
+            <title>check sysctl.conf rp_filter</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf|grep -v \#|grep -E "rp_filter"|awk -F "=" '{print $1"|+|"$NF}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if str(item.split("|+|")[1])!="0":&#x000A;&#x0009;&#x0009;status="False"
+            </threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if str(row.split("|+|")[1])!="0":&#x000A;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+"0"+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 3-->
+        <templete id="9b2799d171ce4a23a03651ef6cbddd18" >
+            <title>check /proc/meminfo AnonHugePages</title>
+            <command>
+                <![CDATA[ sudo cat /proc/meminfo |grep AnonHugePages|sed 's/:/|+|/g'| sed 's/ //g' ]]>
+            </command>
+            <scope>scope={"AnonHugePages":str(actualval.split("|+|")[1].upper().replace("KB",""))}</scope>
+            <threshold>status="True"&#x000A;if str(AnonHugePages)!="0":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass=status&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+"0kB"+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 4-->
+        <templete id="982cbdf0762d445f8b0b92e9b29bb460" >
+            <title>check HugePages_Total and MemTotal ratio</title>
+            <command>
+                <![CDATA[ sudo cat /proc/meminfo |grep -E "HugePages_Total|MemTotal" |awk -F ":" '{print $1"|+|"$2}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x0009;scope[item.split("|+|")[0]]=item.split("|+|")[1]</scope>
+            <threshold>if 0.5&lt;int(HugePages_Total)*2048/int(MemTotal.upper().replace("KB",""))&lt;0.6:&#x000A;&#x0009;status="True"&#x000A;else:&#x000A;&#x0009;status="False"
+            </threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass=status&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|HugePages_Total*2048/MemTotal in (0.5-0.6)|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 5-->
+        <templete id="db703338242e4143a72ad0077f603b8e" >
+            <title>check nr_hugepages and MemTotal ratio</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \# | grep nr_hugepages|awk '{print $1"|+|"$NF}';sudo cat /proc/meminfo |grep MemTotal|sed 's/:/|+|/g'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace(" ","_")]=item.split("|+|")[1]</scope>
+            <threshold>if 0.5&lt;int(nr_hugepages)*2048/int(MemTotal.upper().replace("KB",""))&lt;0.6:&#x000A;&#x0009;status="True"&#x000A;else:&#x000A;&#x0009;status="False"
+            </threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass=status&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|vm.nr_hugepages*2048/MemTotal in (0.5-0.6)|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 6-->
+        <templete id="5511e0d120c04488bb0a9adc877243e8" >
+            <title>check transparent_hugepage value</title>
+            <command>
+                <![CDATA[ cat /sys/kernel/mm/transparent_hugepage/enabled ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if "[never]" not in actualval:&#x000A;&#x0009;status="False"
+            </threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass=status&#x000A;compareres=compareres+row+"|+|[never]|+|"+ispass+"\n"</resultset>
+            <header>Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 7-->
+        <templete id="e15c0c7ff56d431e9adaaf8c43cdc593" >
+            <title>check MTU value</title>
+            <command>
+                <![CDATA[ sudo ifconfig | grep -B 1 "inet.*192.168.1"|grep " mtu "|awk '{print $1$NF}'|sed 's/:/|+|/g' ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if str(item.split("|+|")[1])!="9000":&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if str(row.split("|+|")[1])!="9000":&#x000A;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|9000|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 8-->
+        <templete id="4726e29c3c584aa1871d9619f5c49d69" >
+            <title>check whether sub disks status are all running </title>
+            <command>
+                <![CDATA[ sudo multipath -ll| grep -wv "policy"|grep "\-\ "|awk '{print $3":"$(NF-2)" "$(NF-1)" "$NF}'|grep -v "active ready running" ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is not None and actualval.strip() != '':&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;compareres=compareres+row+"|+| |+|False\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 9-->
+        <templete id="68af4e4bb6b84989b51d41e8bb4dda1e" >
+            <title>check scheduler value </title>
+            <command>
+                <![CDATA[ for i in `find /sys/block/dm-*/queue/scheduler`; do echo $i"|+|"`cat  $i`;done ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if item.split("|+|")[1]!="none" and "deadline" not in item.split("|+|")[1]:&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if row.split("|+|")[1]!="none" and "deadline" not in row.split("|+|")[1]:&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|none or deadline|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 10-->
+        <templete id="0915c476224149799c25df77c53ac915" >
+            <title>check _vktm_ process Priority </title>
+            <command>
+                <![CDATA[ ps -Acfl | grep -v grep | grep "_vktm_"  | awk '{print $NF"|+|"$7}' ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if str(item.split("|+|")[1])!="41":&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if str(row.split("|+|")[1])!="41":&#x000A;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|41|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 11-->
+        <templete id="eebbb249a75a43139d2dafe0143e90c7" >
+            <title>check oradism directory mode|owner|group</title>
+            <command>
+                <![CDATA[ ls -l /u00/app/oracle/product/19.3.0/db/bin/oradism|awk '{print $NF"|+|"$1"_"$3"_"$4}'|sed 's/\.//g' ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval.split("|+|")[1]!="-rwsr-x---_root_oinstall":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass=status&#x000A;&#x0009;compareres=compareres+row+"|+|-rwsr-x---_root_oinstall|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 12-->
+        <templete id="bb7458a026664d6ba7e1f7071aa50793" >
+            <title>check sysctl.conf shmmax|shmmni|shmall value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "shmmax|shmmni|shmall"|awk -F "=" '{print $1"|+|"$NF}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace(" ","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"shmmax":323980314900,"shmall":79174075,"shmmni":4096}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"shmmax":323980314900,"shmall":79174075,"shmmni":4096}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;{
+                }actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 13-->
+        <templete id="81ada9fef09646848fdb60c56ea401ce" >
+            <title>check sysctl.conf sem value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "sem"|awk -F "=" '{print $1"|+|"$NF}' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace(" ","")]=item.split("|+|")[1].replace(" ","")</scope>
+            <threshold>status="True"&#x000A;standard={"sem":1024600001024256}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"sem":1024600001024256 }&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 14-->
+        <templete id="bebdc3070b794f49ae257ca49e8b6fdc" >
+            <title>check sysctl.conf msgmni|msgmax|msgmnb value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "msgmni|msgmax|msgmnb"|awk -F "=" '{print $1"|+|"$NF}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace("-","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"msgmax":8192,"msgmnb":360000,"msgmni":2878}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"msgmax":8192,"msgmnb":360000,"msgmni":2878}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 15-->
+        <templete id="1a929a26e5aa4f76b77a6e2daccbc96c" >
+            <title>check sysctl.conf sysrq value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "sysrq"|awk -F "=" '{print $1"|+|"$NF}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace("-","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"sysrq":1}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"sysrq":1}&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;{
+                }key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 16-->
+        <templete id="c85f2de2e4bd4fcca8f7eb21c4904f80" >
+            <title>check sysctl.conf file-max|aio-max-nr value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "file-max|aio-max-nr"|awk -F "=" '{print $1"|+|"$NF}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace("-","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"file_max":6815744,"aio_max_nr":3145728}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"file_max":6815744,"aio_max_nr":3145728}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace("-","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 17-->
+        <templete id="eb938f372c704d37944958d9d0a90e13" >
+            <title>check sysctl.conf rmem value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "rmem"|awk -F "=" '{print $1"|+|"$NF}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace("-","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"rmem_default":262144,"rmem_max":4194304}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"rmem_default":262144,"rmem_max":4194304}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 18-->
+        <templete id="d1962f01f47a46898440f472aa425c65" >
+            <title>check sysctl.conf wmem value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "wmem"|awk -F "=" '{print $1"|+|"$NF}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace("-","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"wmem_default":262144,"wmem_max":1048576}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"wmem_default":262144,"wmem_max":1048576}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 19-->
+        <templete id="45837fb2ca39499ca3c40f95cdc4887b" >
+            <title>check sysctl.conf ip_local_port_range|tcp_keepalive_time value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "ip_local_port_range|tcp_keepalive_time"|awk -F "=" '{print $1"|+|"$NF}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace("-","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"tcp_keepalive_time":120,"ip_local_port_range":900065500}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"tcp_keepalive_time":120,"ip_local_port_range":900065500}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 20-->
+        <templete id="b4286bdc8e9f477599e987636e76016d" >
+            <title>check sysctl.conf ipanic_on_oops|pid_max value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "panic_on_oops|pid_max"|awk -F "=" '{print $1"|+|"$NF}'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace("-","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"panic_on_oops":1,"pid_max":139264}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"panic_on_oops":1,"pid_max":139264}&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;{
+                }key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 21-->
+        <templete id="887bc88fc31a4ef3b96c6416767d4b08" >
+            <title>check sysctl.conf numa_balancing value</title>
+            <command>
+                <![CDATA[ cat /etc/sysctl.conf| grep -v \#|grep -E "numa_balancing" | awk '{print $1"|+|"$NF}' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace("-","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"numa_balancing":0}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"numa_balancing":0}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 22-->
+        <templete id="01061c2cc136459fb1d4369807b30cf3" >
+            <title>check limits.conf nproc value</title>
+            <command>
+                <![CDATA[ cat /etc/security/limits.conf | grep -v \# | sed '/^$/d'|grep nproc |awk '{print $1" "$2" "$3"|+|"$NF}' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace(" ","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"oracle_soft_nproc":131072,"root_soft_nproc":131072,"oracle_hard_nproc":131072,"root_hard_nproc":131072}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"oracle_soft_nproc":131072,"root_soft_nproc":131072,"oracle_hard_nproc":131072,"root_hard_nproc":131072}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 23-->
+        <templete id="519cdbca832d49a483784ee795f93fdd" >
+            <title>check limits.conf nofile value</title>
+            <command>
+                <![CDATA[ cat /etc/security/limits.conf | grep -v \# | sed '/^$/d'|grep nofile |awk '{print $1" "$2" "$3"|+|"$NF}' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace(" ","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"oracle_soft_nofile":131072,"root_soft_nofile":131072,"oracle_hard_nofile":131072,"root_hard_nofile":131072}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"oracle_soft_nofile":131072,"root_soft_nofile":131072,"oracle_hard_nofile":131072,"root_hard_nofile":131072}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 24-->
+        <templete id="ba5bf9fb70ff4fc09f1ebf1705dc2dd9" >
+            <title>check limits.conf memlock|core|stack value</title>
+            <command>
+                <![CDATA[ cat /etc/security/limits.conf | grep -Ev '\*|#' | sed '/^$/d'|grep -E "memlock|core|stack" |awk '{print $1" "$2" "$3"|+|"$NF}' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace(" ","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"oracle_soft_memlock":336161536,"oracle_hard_memlock":336161536,"oracle_soft_core":"unlimited",
+                "oracle_hard_core":"unlimited","oracle_soft_stack":32768,"oracle_hard_stack":65536}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;continue&#x000A;&#x0009;{
+                }if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"oracle_soft_memlock":336161536,"oracle_hard_memlock":336161536,"oracle_soft_core":"unlimited",
+                "oracle_hard_core":"unlimited","oracle_soft_stack":32768,"oracle_hard_stack":65536}&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;{
+                }key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 25-->
+        <templete id="0cbcb09e6a74444c900bf4cff820211c" >
+            <title>check iptables|multi with chkconfig</title>
+            <command>
+                <![CDATA[ sudo chkconfig 2>/dev/null|grep -E "iptables|multi" ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is not None and actualval.strip()!="":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;compareres=compareres+row+"|+| |+|False\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 26-->
+        <templete id="7e108af6ad7a43c58744b507a284045a" >
+            <title>check firewalld service status</title>
+            <command>
+                <![CDATA[ systemctl status firewalld| grep "Active"|awk '{print $1$2$3}'|sed 's/:/|+|/g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0]]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;if "inactive" not in Active:&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if "inactive" not in  str(row.split("|+|")[1]):&#x000A;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|inactive(dead)|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 27-->
+        <templete id="7c93d0ea9192479599be315348c8edb3" >
+            <title>check crond service status</title>
+            <command>
+                <![CDATA[ systemctl status crond | grep "Active"|awk '{print $1$2$3}'|sed 's/:/|+|/g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0]]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;if "inactive" not in Active:&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if "inactive" not in  str(row.split("|+|")[1]):&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|inactive(dead)|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 28-->
+        <templete id="1cc32090cdcd4078b92247d768b048e8" >
+            <title>check multipathd service status</title>
+            <command>
+                <![CDATA[ sudo service multipathd status 2>/dev/null| grep "Active"|awk '{print $1$2""$3}'|sed 's/:/|+|/g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0]]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;if "running" not in Active:&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if "running" not in  str(row.split("|+|")[1]):&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|active(running)|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 29-->
+        <templete id="bb547268f30045a7b3d9c7900534c1e9" >
+            <title>check SELINUX from config</title>
+            <command>
+                <![CDATA[ cat /etc/selinux/config|grep -v \# |grep -w SELINUX|awk  -F "=" '{print $1"|+|"$NF}' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0]]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;if SELINUX !="disabled":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if str(row.split("|+|")[1]) != "disabled":&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|disabled|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 30-->
+        <templete id="9b7e355f65264dd7bfbe39ad7e169349" >
+            <title>check SELINUX with getenforce</title>
+            <command>
+                <![CDATA[ sudo getenforce ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval !="Disabled":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass=status&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|Disabled|+|"+ispass+"\n" </resultset>
+            <header>Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 31-->
+        <templete id="e523c94931544b869e7dd599da242584" >
+            <title>check irqbalance process</title>
+            <command>
+                <![CDATA[ ps aux|grep irqbalance | grep -wv grep|awk '{print $(NF-1)"|+|"$2}' ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if not actualval:&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if not actualval:&#x000A;&#x0009;&#x0009;ispass="False"{
+                }&#x000A;&#x0009;compareres=compareres+row+"|+|not None|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 32-->
+        <templete id="631f1d66090441b58cc6ee614f22cbd8" >
+            <title>check ora.crf status</title>
+            <command>
+                <![CDATA[ source /home/oracle/.bash_profile;crsctl stat res -t -init  | grep -A 1 ^ora.crf | xargs|awk '{print $1"|+|"$3}' ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval.split("|+|")[1]!="OFFLINE":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if row.split("|+|")[1]!="OFFLINE":&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|OFFLINE|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 33-->
+        <templete id="09764dfc9ffd4bc095f59602bf24b100" >
+            <title>check numa_balancing config</title>
+            <command>
+                <![CDATA[ cat /proc/sys/kernel/numa_balancing ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval.split("|+|")[0]!="0":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if row.split("|+|")[0]!="0":&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|0|+|"+ispass+"\n" </resultset>
+            <header>Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 34-->
+        <templete id="a5e5d24620be4861ab96bd4c9bbb44c2" >
+            <title>check sqlnet</title>
+            <command>
+                <![CDATA[ source /home/oracle/.bash_profile;cat $ORACLE_HOME/network/admin/sqlnet.ora  | grep ALLOWED_LOGON_VERSION |sed 's/=/|+|/g'|sed 's/ //g' ]]>
+            </command>
+            <scope>scope={}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;scope[item.split("|+|")[0].split(".")[-1].replace(" ","_")]=item.split("|+|")[1]</scope>
+            <threshold>status="True"&#x000A;standard={"ALLOWED_LOGON_VERSION_SERVER":8,"ALLOWED_LOGON_VERSION_CLIENT":8}&#x000A;{
+                }for key,item in standard.items():&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;cmpval=eval(key)&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;status="False"&#x000A;&#x0009;&#x0009;{
+                }continue&#x000A;&#x0009;if str(standard[key])!=str(cmpval):&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"ALLOWED_LOGON_VERSION_SERVER":8,"ALLOWED_LOGON_VERSION_CLIENT":8}&#x000A;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;key=row.split("|+|")[0].split(".")[-1].replace(" ","_")&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;{
+                }try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):{
+                }&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+            <header>Quota|+|Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+        <!--OS 35-->
+        <templete id="c0029359d8a94d36b0c2619a51b49a9c" >
+            <title>check OEM status</title>
+            <command>
+                <![CDATA[ /u00/app/oracle/product/agent13c/agent_13.4.0.0.0/bin/emctl status agent 2>/dev/null | grep -i 'Running and Ready' ]]>
+            </command>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is None or actualval.strip()=="":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if actualval is None or actualval.strip()=="":&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|Agent is Running and Ready|+|"+ispass+"\n" </resultset>
+            <header>Actualvalue|+|Expectedvalue|+|IsPassed</header>
+        </templete>
+    </OS>
+    <DB>
+        <!--DB 1-->
+        <templete id="50b9be0274ea433381bb5953a15be913" >
+            <title>check diffence parameter from each instance</title>
+            <command>
+                <![CDATA[ with parameters as
+                (select name,inst1,inst2,inst3,inst4,inst5,inst6
+                from (select inst_id, name, value from gv\$parameter where name not in
+                ('background_dump_dest','core_dump_dest','instance_name','instance_number','local_listener','thread','undo_tablespace','user_dump_dest'))
+                pivot(max(value) for inst_id in(1 as inst1, 2 as inst2, 3 as inst3, 4 as inst4, 5 as inst5, 6 as inst6)))
+                select name||'|+|'||inst1||'|+|'||inst2||'|+|'||inst3||'|+|'||inst4||'|+|'||inst5||'|+|'||inst6 from parameters
+                where inst2 <> inst1 or inst3 <> inst2 or inst4 <> inst3 or inst6 <> inst4 or inst6 <> inst5;
+                ]]>
+            </command>
+            <header>name|+|inst1|+|inst2|+|inst3|+|inst4|+|inst5|+|inst6|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is not None and actualval.strip()!="":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;compareres=compareres+row+"|+|should be none|+|False\n"</resultset>
+        </templete>
+        <!--DB 2-->
+        <templete id="bb485ce23553408ca6b16eb1faa41bba" >
+            <title>check group# count peer instance</title>
+            <command>
+                <![CDATA[ select tb.thread#||'|+|'||count(1) from v\$logfile ta, v\$log tb where ta.group#=tb.group# group by tb.thread#; ]]>
+            </command>
+            <header>thread|+|number|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if item.split("|+|")[1]&lt;"4":&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if str(row.split("|+|")[1])&lt;"4":&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|>=4|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 3-->
+        <templete id="b5d4efc7adaf40f884240bb443d92abc" >
+            <title>check logfile location</title>
+            <command>
+                <![CDATA[ SELECT group#||'|+|'||member from v\$logfile where member like '%DG_DATA%'; ]]>
+            </command>
+            <header>group|+|member|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is not None and actualval.strip()!="":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;compareres=compareres+row+"|+|should not in DG_DATA disk|+|False\n"</resultset>
+        </templete>
+        <!--DB 4-->
+        <templete id="32be6f7ae3dc416fb5721c47b88ff56b" >
+            <title>check logfile size</title>
+            <command>
+                <![CDATA[ select group#||'|+|'||thread#||'|+|'||bytes/1024/1024 from v\$log order by thread#; ]]>
+            </command>
+            <header>group|+|thread|+|size(M)|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if int(item.split("|+|")[2])&lt;500:&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if int(row.split("|+|")[2])&lt;500:&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|>500|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 5-->
+        <templete id="3accdd59f45d410bb4424bf288177d1b" >
+            <title>check dba_rollback_segs status and count</title>
+            <command>
+                <![CDATA[ select tablespace_name||'|+|'||status||'|+|'||count(1) from dba_rollback_segs
+                where tablespace_name<>'SYSTEM' group by tablespace_name,status order by tablespace_name; ]]>
+            </command>
+            <header>tablespace_name|+|status|+|number|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if int(item.split("|+|")[2])&lt;4000 or item.split("|+|")[1]!='ONLINE':&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if int(row.split("|+|")[2])&lt;4000 or row.split("|+|")[1]!='ONLINE':&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|status should be ONLINE and number>4000|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 6-->
+        <templete id="38322c2b0b45467ba3da77284d115157" >
+            <title>check tablespace usage</title>
+            <command>
+                <![CDATA[ select a.tablespace_name||'|+|'||trunc(a.bytes/1024/1024/1024,2)||'|+|'||trunc(c.bytes/1024/1024/1024,2)||'|+|'||
+                     trunc((a.bytes-c.bytes)*100/a.bytes,0) ||'|+|'||trunc((c.bytes*100)/a.bytes,0)
+                     from SYS.SM\$TS_AVAIL A,SYS.SM\$TS_FREE C
+                         WHERE  A.TABLESPACE_NAME=C.TABLESPACE_NAME
+                         AND A.TABLESPACE_NAME IN (select distinct tablespace_name from dba_tablespaces)
+                         and A.tablespace_name like 'UNDO%'
+                         order by a.tablespace_name ; ]]>
+            </command>
+            <header>tablespace_name|+|total/g|+|free/g|+|% USED|+|% FREE|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if int(item.split("|+|")[4])&lt;60:&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if int(row.split("|+|")[4])&lt;60:&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|% FREE>60|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 7-->
+        <templete id="f80f0abf53ae41a799f243becbff4cf3" >
+            <title>check temporary file size</title>
+            <command>
+                <![CDATA[ select tablespace_name||'|+|'||trunc(sum(bytes)/1024/1024/1024) from dba_temp_files group by tablespace_name; ]]>
+            </command>
+            <header>tablespace_name|+|total/g|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if int(item.split("|+|")[1])&lt;150:&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if int(row.split("|+|")[1])&lt;150:&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|>150|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 8-->
+        <templete id="e30c35bb391a4e68929b1da919656282" >
+            <title>check db undo</title>
+            <command>
+                <![CDATA[ select inst_id||'|+|'||name||'|+|'||value from gv\$parameter where name in ('undo_management','undo_retention'); ]]>
+            </command>
+            <header>inst_id|+|name|+|value|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;standard={"undo_management":"AUTO","undo_retention":3600}&#x000A;{
+                }for item in actualval.splitlines():&#x000A;&#x0009;if str(standard[item.split("|+|")[1]])!=item.split("|+|")[2]:{
+                }&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={"undo_management":"AUTO","undo_retention":3600}&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;{
+                }key=row.split("|+|")[1]&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;actval=row.split("|+|")[2].replace(" ","")&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;{
+                }val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 9-->
+        <templete id="e49973519356442299f2882f7726e0e4" >
+            <title>check db parameters</title>
+            <command>
+                <![CDATA[ select inst_id||'|+|'||name||'|+|'||value from gv\$parameter where
+                name in ('sga_max_size','pga_aggregate_limit','pga_aggregate_target','awr_snapshot_time_offset','sga_target','compatible','memory_target','memory_max_target',
+                      '_use_adaptive_log_file_sync','_rollback_segment_count','NLS_CHARACTERSET','_lm_drm_disable','_gc_policy_minimum',
+                      '_client_enable_auto_unregister','cursor_bind_capture_destination','cursor_sharing', '_undo_autotune','open_cursors',
+                  'session_cached_cursors','optimizer_capture_sql_plan_baselines','optimizer_use_sql_plan_baselines','_gc_affinity_locking',
+                  '_gc_read_mostly_locking')
+                order by name,inst_id; ]]>
+            </command>
+            <header>inst_id|+|name|+|value|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;standard={'_client_enable_auto_unregister':'TRUE','_gc_policy_minimum':'15000','_lm_drm_disable':'5','_rollback_segment_count':'8000',
+                '_undo_autotune':'FALSE','_use_adaptive_log_file_sync':'FALSE','awr_snapshot_time_offset':'300','compatible':'11.2.0.4.0',
+                'cursor_bind_capture_destination':'memory+disk','cursor_sharing':'EXACT','memory_max_target':'0','memory_target':'0','open_cursors':'3000',
+                'optimizer_capture_sql_plan_baselines':'FALSE','optimizer_use_sql_plan_baselines':'FALSE','session_cached_cursors':'1500',
+                'sga_max_size':'107374182400','sga_target':'107374182400','pga_aggregate_limit':'21474836480','pga_aggregate_target':'10737418240'}&#x000A;{
+                }for item in actualval.splitlines():&#x000A;&#x0009;{
+                }if str(standard[item.split("|+|")[1]])!=item.split("|+|")[2]:&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={'_client_enable_auto_unregister':'TRUE','_gc_policy_minimum':'15000','_lm_drm_disable':'5','_rollback_segment_count':'8000',
+                '_undo_autotune':'FALSE','_use_adaptive_log_file_sync':'FALSE','awr_snapshot_time_offset':'300','compatible':'11.2.0.4.0',
+                'cursor_bind_capture_destination':'memory+disk','cursor_sharing':'EXACT','memory_max_target':'0','memory_target':'0','open_cursors':'3000',
+                'optimizer_capture_sql_plan_baselines':'FALSE','optimizer_use_sql_plan_baselines':'FALSE','session_cached_cursors':'1500',
+                'sga_max_size':'107374182400','sga_target':'107374182400','pga_aggregate_limit':'21474836480','pga_aggregate_target':'10737418240'}&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;{
+                }key=row.split("|+|")[1]&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;actval=row.split("|+|")[2].replace(" ","")&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;{
+                }val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 10-->
+        <templete id="65e03fe6b19349d4b89d6976cea31998" >
+            <title>check db parameter management_pack/ddl_logging</title>
+            <command>
+                <![CDATA[ select inst_id||'|+|'||name||'|+|'||value from gv\$parameter where name in ('control_management_pack_access','enable_ddl_logging'); ]]>
+            </command>
+            <header>inst_id|+|name|+|value|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;standard={'control_management_pack_access':'DIAGNOSTIC+TUNING','enable_ddl_logging':'FALSE'}&#x000A;{
+                }for item in actualval.splitlines():&#x000A;&#x0009;key=item.split("|+|")[1]&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;{
+                }except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;if val!=item.split("|+|")[2]:&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={'control_management_pack_access':'DIAGNOSTIC+TUNING','enable_ddl_logging':'FALSE'}&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;{
+                }key=row.split("|+|")[1]&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;actval=row.split("|+|")[2].replace(" ","")&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;{
+                }val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 11-->
+        <templete id="445809c307e5455f90433d3e9df498e4" >
+            <title>check db supplemental log status</title>
+            <command>
+                <![CDATA[ with temp as (select inst_id,name db_name,force_logging,SUPPLEMENTAL_LOG_DATA_MIN,SUPPLEMENTAL_LOG_DATA_PK,SUPPLEMENTAL_LOG_DATA_UI,
+                  SUPPLEMENTAL_LOG_DATA_FK,SUPPLEMENTAL_LOG_DATA_ALL from gv\$database
+                )
+                select inst_id||'|+|'||db_name||'|+|'||quotas||'|+|'||val from temp
+                unpivot
+                (val for quotas in (SUPPLEMENTAL_LOG_DATA_MIN,SUPPLEMENTAL_LOG_DATA_PK,SUPPLEMENTAL_LOG_DATA_UI,SUPPLEMENTAL_LOG_DATA_FK,SUPPLEMENTAL_LOG_DATA_ALL) ) t
+                order by inst_id,quotas; ]]>
+            </command>
+            <header>inst_id|+|db_name|+|quotas|+|val|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;standard={'SUPPLEMENTAL_LOG_DATA_ALL':'NO','SUPPLEMENTAL_LOG_DATA_FK':'NO','SUPPLEMENTAL_LOG_DATA_MIN':'YES',
+                'SUPPLEMENTAL_LOG_DATA_PK':'YES','SUPPLEMENTAL_LOG_DATA_UI':'YES'}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;{
+                }key=item.split("|+|")[2]&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;{
+                }except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;if val!=item.split("|+|")[3]:&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={'SUPPLEMENTAL_LOG_DATA_ALL':'NO','SUPPLEMENTAL_LOG_DATA_FK':'NO','SUPPLEMENTAL_LOG_DATA_MIN':'YES',
+                'SUPPLEMENTAL_LOG_DATA_PK':'YES','SUPPLEMENTAL_LOG_DATA_UI':'YES'}&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;{
+                }key=row.split("|+|")[2]&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;actval=row.split("|+|")[3].replace(" ","")&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;{
+                }val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 12-->
+        <templete id="75319655efc846a28a83a733555870b1" >
+            <title>check db GATHER_STATS jobs</title>
+            <command>
+                <![CDATA[ SELECT job_name||'|+|'||enabled||'|+|'||count(1) over() from dba_scheduler_jobs where job_name like 'GATHER_STATS%'; ]]>
+            </command>
+            <header>job_name|+|enabled|+|number|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is None or actualval.strip()=="":&#x000A;&#x0009;status="False"&#x000A;else:&#x000A;&#x0009;for item in actualval.splitlines():&#x000A;&#x0009;&#x0009;{
+                }if item.split("|+|")[1]!='TRUE' or int(item.split("|+|")[2])&lt;2:&#x000A;&#x0009;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;ispass="True"&#x000A;if actualval is None or actualval.strip()=="":&#x000A;&#x0009;compareres="Null|+|Null|+|Null|+|GATHER_STATS jobs should number>2 and enabled|+|False"&#x000A;else:&#x000A;&#x0009;{
+                }for row in actualval.splitlines():&#x000A;&#x0009;&#x0009;if row.split("|+|")[1]!='TRUE' or int(row.split("|+|")[2])&lt;2:&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;&#x0009;{
+                }compareres=compareres+row+"|+|enabled=TRUE and number>2|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 13-->
+        <templete id="3c275646899f4b2aaf23e96842395c32" >
+            <title>check db profiles jobs</title>
+            <command>
+                <![CDATA[ select resource_name||'|+|'||limit from dba_profiles where profile='DEFAULT'; ]]>
+            </command>
+            <header>resource_name|+|limit|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if item.split("|+|")[1] not in ["NULL","UNLIMITED"]:&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if row.split("|+|")[1] not in ["NULL","UNLIMITED"]:&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|[NULL,UNLIMITED]|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 14-->
+        <templete id="f2df8125072f43d9af745dc365f41cdf" >
+            <title>check db hist wr config</title>
+            <command>
+                <![CDATA[ with temp as (select snap_interval,retention from dba_hist_wr_control)
+                    select quotas||'|+|'||val from temp unpivot(val for quotas in (snap_interval,retention)) t order by quotas; ]]>
+            </command>
+            <header>snap_interval|+|retention|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;standard={'RETENTION':'+00030 00:00:00.0','SNAP_INTERVAL':'+00000 00:10:00.0'}&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;{
+                }key=item.split("|+|")[0]&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;val=str(standard[key])&#x000A;&#x0009;{
+                }except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;if val!=item.split("|+|")[1]:&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;standard={'RETENTION':'+00030 00:00:00.0','SNAP_INTERVAL':'+00000 00:10:00.0'}&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;{
+                }key=row.split("|+|")[0]&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;actval=row.split("|+|")[1].replace(" ","")&#x000A;&#x0009;try:&#x000A;&#x0009;&#x0009;{
+                }val=str(standard[key])&#x000A;&#x0009;&#x0009;if actval!=str(val):&#x000A;&#x0009;&#x0009;&#x0009;ispass="False"&#x000A;&#x0009;except:&#x000A;&#x0009;&#x0009;val="no standard"&#x000A;&#x0009;{
+                }compareres=compareres+row+"|+|"+val+"|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 15-->
+        <templete id="cee67b8856644d5e990081834f320695" >
+            <title>check db option</title>
+            <command>
+                <![CDATA[ select inst_id||'|+|'||parameter||'|+|'||value from gv\$option where parameter in ('OLAP','Data Mining','Real Application Testing', 'Unified Auditing') order by parameter,inst_id; ]]>
+            </command>
+            <header>snap_interval|+|parameter|+|value|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if item.split("|+|")[2]!='FALSE':&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if row.split("|+|")[2]!='FALSE':&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|FALSE|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 16-->
+        <templete id="bdabddb412d445108920cc5bc62bc657">
+            <title>check db autotask client</title>
+            <command>
+                <![CDATA[ select client_name||'|+|'||status from dba_autotask_client; ]]>
+            </command>
+            <header>client_name|+|status|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;for item in actualval.splitlines():&#x000A;&#x0009;if item.split("|+|")[1]!='DISABLED':&#x000A;&#x0009;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;ispass="True"&#x000A;&#x0009;if row.split("|+|")[1]!='DISABLED':&#x000A;&#x0009;&#x0009;{
+                }ispass="False"&#x000A;&#x0009;compareres=compareres+row+"|+|DISABLED|+|"+ispass+"\n"</resultset>
+        </templete>
+        <!--DB 17-->
+        <templete id="603cff9bc42e4c8ca5b2b314d40c0872" >
+            <title>check db stmt audit opts</title>
+            <command>
+                <![CDATA[ select user_name||'|+|'||proxy_name||'|+|'||audit_option||'|+|'||success||'|+|'||failure from dba_stmt_audit_opts; ]]>
+            </command>
+            <header>user_name|+|proxy_name|+|audit_option|+|success|+|failure|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is not None and actualval.strip() != "":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;compareres=compareres+row+"|+|should be None|+|False\n"</resultset>
+        </templete>
+        <!--DB 18-->
+        <templete id="83b9501f7e8c47b4bdad57513eef8f2e" >
+            <title>check db def audit opts</title>
+            <command>
+                <![CDATA[ select alt||'|+|'||aud||'|+|'||com||'|+|'||del||'|+|'||gra||'|+|'||ind||'|+|'||ins||'|+|'||loc||'|+|'||
+                ren||'|+|'||sel||'|+|'||upd||'|+|'||exe||'|+|'||fbk||'|+|'||rea from all_def_audit_opts where alt !='-/-'; ]]>
+            </command>
+            <header>alt|+|aud|+|com|+|del|+|gra|+|ind|+|ins|+|loc|+|ren|+|sel|+|upd|+|exe|+|fbk|+|rea|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is not None and actualval.strip() != "":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;compareres=compareres+row+"|+|should be None|+|False\n"</resultset>
+        </templete>
+        <!--DB 19-->
+        <templete id="1824e35f321343829118ad13b17f041d" >
+            <title>check db obj audit opts</title>
+            <command>
+                <![CDATA[ select owner||'|+|'||object_name||'|+|'||object_type from dba_obj_audit_opts; ]]>
+            </command>
+            <header>owner|+|object_name|+|object_type|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is not None and actualval.strip() != "":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;compareres=compareres+row+"|+|should be None|+|False\n"</resultset>
+        </templete>
+        <!--DB 20-->
+        <templete id="3f208f762e5a42a0bd104cae7d3155c3" >
+            <title>check db audit unified enabled policies</title>
+            <command>
+                <![CDATA[ select policy_name||'|+|'||enabled_option||'|+|'||entity_name||'|+|'||entity_type||'|+|'||success||'|+|'||failure
+                from audit_unified_enabled_policies; ]]>
+            </command>
+            <header>policy_name|+|enabled_option|+|entity_name|+|entity_type|+|success|+|failure|+|Expectedvalue|+|IsPassed</header>
+            <scope>scope={"actualval":actualval}</scope>
+            <threshold>status="True"&#x000A;if actualval is not None and actualval.strip()!= "":&#x000A;&#x0009;status="False"</threshold>
+            <resultset>compareres=""&#x000A;for row in actualval.splitlines():&#x000A;&#x0009;compareres=compareres+row+"|+|should be None|+|False\n"</resultset>
+        </templete>
+    </DB>
+</DatabaseAudit>

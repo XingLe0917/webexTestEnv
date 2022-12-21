@@ -1,0 +1,232 @@
+<DatabaseTemplate name="New Database" description="" version="19.0.0.0.0">
+    <CommonAttributes>
+       <option name="OMS" value="false"/>
+       <option name="JSERVER" value="true"/>
+       <option name="SPATIAL" value="true"/>
+       <option name="IMEDIA" value="true"/>
+       <option name="ORACLE_TEXT" value="true">
+          <tablespace id="SYSAUX"/>
+       </option>
+       <option name="CWMLITE" value="true">
+          <tablespace id="SYSAUX"/>
+       </option>
+       <option name="SAMPLE_SCHEMA" value="false"/>
+       <option name="APEX" value="false"/>
+       <option name="DV" value="false"/>
+    </CommonAttributes>
+    <Variables/>
+    <CustomScripts Execute="false"/>
+    <InitParamAttributes>
+       <InitParams>
+           <initParam name="db_name" value="{ORACLE_SID}"/>
+           <initParam name="db_domain" value="webex.com"/>
+           <initParam name="dispatchers" value="(PROTOCOL=TCP) (SERVICE={SID}XDB)"/>
+           <initParam name="audit_file_dest" value="/u00/app/oracle/admin/{ORACLE_SID}/adump"/>
+           <initParam name="compatible" value="11.2.0.4.0"/>
+           <initParam name="remote_login_passwordfile" value="EXCLUSIVE"/>
+           <initParam name="log_archive_dest_1" value="''LOCATION=+DG_FRA''"/>
+           <initParam name="db_create_online_log_dest_1" value="+DG_REDO"/>
+           <initParam name="processes" value="2000"/>
+           <initParam name="_rollback_segment_count" value="7000"/>
+           <initParam name="_undo_autotune" value="FALSE"/>
+           <initParam name="undo_retention" value="3600"/>
+           <initParam name="control_files" value=""/>
+           <initParam name="diagnostic_dest" value="/u00/app/oracle"/>
+           <initParam name="audit_trail" value="DB"/>
+           <initParam name="sessions" value="4536"/>
+           <initParam name="db_block_size" value="8192"/>
+           <initParam name="open_cursors" value="3000"/>
+           <initParam name="undo_tablespace" value="UNDOTBS1"/>
+           <initParam name="sga_target" value="{sgatarget}G"/>
+           <initParam name="optimizer_adaptive_plans" value="FALSE"/>
+           <initParam name="_sql_plan_directive_mgmt_control" value="0"/>
+           <initParam name="_report_capture_cycle_time" value="0"/>
+           <initParam name="_column_tracking_level" value="1"/>
+           <initParam name="_dlm_stats_collect" value="0"/>
+           <initParam name="awr_snapshot_time_offset" value="300"/>
+           <initParam name="parallel_min_servers" value="20"/>
+           <initParam name="resource_limit" value="FALSE"/>
+           <initParam name="sql92_security" value="FALSE"/>
+           <initParam name="_use_adaptive_log_file_sync" value="FALSE"/>
+           <initParam name="audit_sys_operations" value="FALSE"/>
+           <initParam name="open_cursors" value="3000"/>
+           <initParam name="session_cached_cursors" value="1500"/>
+           <initParam name="_lm_drm_disable" value="5"/>
+           <initParam name="_gc_policy_minimum" value="15000"/>
+           <initParam name="job_queue_processes" value="1000"/>
+           <initParam name="event" value="28401 trace name context forever, level 1"/>
+           <initParam name="control_file_record_keep_time" value="30"/>
+           <initParam name="_client_enable_auto_unregister" value="TRUE"/>
+           <initParam name="optimizer_use_sql_plan_baselines" value="TRUE"/>
+           <initParam name="pga_aggregate_target" value="{pgatarget}G"/>
+       </InitParams>
+       <MiscParams>
+          <characterSet>{characterSet}</characterSet>
+          <nationalCharacterSet>AL16UTF16</nationalCharacterSet>
+          <archiveLogMode>true</archiveLogMode>
+       </MiscParams>
+       <SPfile useSPFile="true">+DG_DATA/{ORACLE_SID}/spfile{SID}.ora</SPfile>
+    </InitParamAttributes>
+    <StorageAttributes>
+        <ControlfileAttributes id="Controlfile">
+            <maxDatafiles>100</maxDatafiles>
+            <maxLogfiles>16</maxLogfiles>
+            <maxLogMembers>3</maxLogMembers>
+            <maxLogHistory>1</maxLogHistory>
+            <maxInstances>8</maxInstances>
+            <image name="control01.ctl" filepath="+DG_DATA/{ORACLE_SID}/"/>
+            <image name="control02.ctl" filepath="+DG_DATA/{ORACLE_SID}/"/>
+        </ControlfileAttributes>
+        <DatafileAttributes id="+DG_DATA/{ORACLE_SID}/sysaux01.dbf">
+            <tablespace>SYSAUX</tablespace>
+            <temporary>false</temporary>
+            <online>true</online>
+            <status>0</status>
+            <size unit="MB">10240</size>
+            <reuse>true</reuse>
+            <autoExtend>true</autoExtend>
+            <increment unit="MB">1024</increment>
+            <maxSize unit="MB">32767</maxSize>
+        </DatafileAttributes>
+        <DatafileAttributes id="+DG_DATA/{ORACLE_SID}/users01.dbf">
+            <tablespace>USERS</tablespace>
+            <temporary>false</temporary>
+            <online>true</online>
+            <status>0</status>
+            <size unit="MB">10240</size>
+            <reuse>true</reuse>
+            <autoExtend>true</autoExtend>
+            <increment unit="MB">1024</increment>
+            <maxSize unit="MB">32767</maxSize>
+        </DatafileAttributes>
+        <DatafileAttributes id="+DG_DATA/{ORACLE_SID}/system01.dbf">
+            <tablespace>SYSTEM</tablespace>
+            <temporary>false</temporary>
+            <online>true</online>
+            <status>0</status>
+            <size unit="MB">10240</size>
+            <reuse>true</reuse>
+            <autoExtend>true</autoExtend>
+            <increment unit="MB">1024</increment>
+            <maxSize unit="MB">32767</maxSize>
+        </DatafileAttributes>
+        <DatafileAttributes id="+DG_DATA/{ORACLE_SID}/temp01.dbf">
+            <tablespace>TEMP</tablespace>
+            <temporary>false</temporary>
+            <online>true</online>
+            <status>0</status>
+            <size unit="MB">30240</size>
+            <reuse>true</reuse>
+            <autoExtend>true</autoExtend>
+            <increment unit="MB">1024</increment>
+            <maxSize unit="MB">32767</maxSize>
+        </DatafileAttributes>
+        <UndoDatafileAttr id="UNDOTBS"> </UndoDatafileAttr>
+        <TablespaceAttributes id="SYSAUX">
+            <online>true</online>
+            <offlineMode>1</offlineMode>
+            <readOnly>false</readOnly>
+            <temporary>false</temporary>
+            <defaultTemp>false</defaultTemp>
+            <undo>false</undo>
+            <local>true</local>
+            <blockSize>8192</blockSize>
+            <allocation>1</allocation>
+            <uniAllocSize unit="KB">-1</uniAllocSize>
+            <initSize unit="KB">64</initSize>
+            <increment unit="MB">1024</increment>
+            <incrementPercent>0</incrementPercent>
+            <minExtends>1</minExtends>
+            <maxExtends>2147483645</maxExtends>
+            <minExtendsSize unit="KB">64</minExtendsSize>
+            <logging>true</logging>
+            <recoverable>false</recoverable>
+            <maxFreeSpace>0</maxFreeSpace>
+            <autoSegmentMgmt>true</autoSegmentMgmt>
+            <bigfile>false</bigfile>
+            <datafilesList>
+                <TablespaceDatafileAttributes id="+DG_DATA/{ORACLE_SID}/sysaux01.dbf"/>
+            </datafilesList>
+        </TablespaceAttributes>
+        <TablespaceAttributes id="USERS">
+            <online>true</online>
+            <offlineMode>1</offlineMode>
+            <readOnly>false</readOnly>
+            <temporary>false</temporary>
+            <defaultTemp>false</defaultTemp>
+            <undo>false</undo>
+            <local>true</local>
+            <blockSize>8192</blockSize>
+            <allocation>1</allocation>
+            <uniAllocSize unit="KB">-1</uniAllocSize>
+            <initSize unit="KB">64</initSize>
+            <increment unit="MB">1024</increment>
+            <incrementPercent>0</incrementPercent>
+            <minExtends>1</minExtends>
+            <maxExtends>2147483645</maxExtends>
+            <minExtendsSize unit="KB">64</minExtendsSize>
+            <logging>true</logging>
+            <recoverable>false</recoverable>
+            <maxFreeSpace>0</maxFreeSpace>
+            <autoSegmentMgmt>true</autoSegmentMgmt>
+            <bigfile>false</bigfile>
+            <datafilesList>
+                <TablespaceDatafileAttributes id="+DG_DATA/{ORACLE_SID}/users01.dbf"/>
+            </datafilesList>
+        </TablespaceAttributes>
+        <TablespaceAttributes id="SYSTEM">
+            <online>true</online>
+            <offlineMode>1</offlineMode>
+            <readOnly>false</readOnly>
+            <temporary>false</temporary>
+            <defaultTemp>false</defaultTemp>
+            <undo>false</undo>
+            <local>true</local>
+            <blockSize>8192</blockSize>
+            <allocation>1</allocation>
+            <uniAllocSize unit="KB">-1</uniAllocSize>
+            <initSize unit="KB">64</initSize>
+            <increment unit="MB">1024</increment>
+            <incrementPercent>0</incrementPercent>
+            <minExtends>1</minExtends>
+            <maxExtends>2147483645</maxExtends>
+            <minExtendsSize unit="KB">64</minExtendsSize>
+            <logging>true</logging>
+            <recoverable>false</recoverable>
+            <maxFreeSpace>0</maxFreeSpace>
+            <autoSegmentMgmt>false</autoSegmentMgmt>
+            <bigfile>false</bigfile>
+            <datafilesList>
+                <TablespaceDatafileAttributes id="+DG_DATA/{ORACLE_SID}/system01.dbf"/>
+            </datafilesList>
+        </TablespaceAttributes>
+        <TablespaceAttributes id="TEMP">
+            <online>true</online>
+            <offlineMode>1</offlineMode>
+            <readOnly>false</readOnly>
+            <temporary>true</temporary>
+            <defaultTemp>true</defaultTemp>
+            <undo>false</undo>
+            <local>true</local>
+            <blockSize>8192</blockSize>
+            <allocation>2</allocation>
+            <uniAllocSize unit="KB">1024</uniAllocSize>
+            <initSize unit="KB">1024</initSize>
+            <increment unit="MB">1024</increment>
+            <incrementPercent>0</incrementPercent>
+            <minExtends>1</minExtends>
+            <maxExtends>-1</maxExtends>
+            <minExtendsSize unit="KB">1024</minExtendsSize>
+            <logging>false</logging>
+            <recoverable>false</recoverable>
+            <maxFreeSpace>0</maxFreeSpace>
+            <autoSegmentMgmt>false</autoSegmentMgmt>
+            <bigfile>false</bigfile>
+            <datafilesList>
+                <TablespaceDatafileAttributes id="+DG_DATA/{ORACLE_SID}/temp01.dbf"/>
+            </datafilesList>
+        </TablespaceAttributes>
+        <UndoTablespaceAttr id="UNDOTBS"></UndoTablespaceAttr>
+        <RedoLogGroupAttr id="RedoLogGroup"></RedoLogGroupAttr>
+    </StorageAttributes>
+</DatabaseTemplate>

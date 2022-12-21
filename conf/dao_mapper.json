@@ -1,0 +1,9 @@
+{"DAO_DEPOTDBDAO":"dao.depotdbdao.DepotDBDao",
+  "DAO_PGDEPOTDBDAO":"dao.pgdepotdbdao.PGDepotDBDao",
+  "DAO_DBAUDITDAO":"dao.dbauditdao.DBAuditDao",
+  "DAO_SHAREPLEXMONITORDAO": "dao.shareplexmonitordao.ShareplexMonitorDao",
+  "DAO_CONFIGDBDAO": "dao.configdbdao.ConfigDBDao",
+  "DAO_CRONJOBMANAGEMENTDAO": "dao.cronjobmanagementdao.CronjobManagementDao",
+  "DAO_ORA2PGDAO": "dao.ora2pgdao.ORA2PGDao",
+  "DAO_DBCUTOVERDAO": "dao.dbcutoverdao.DBCutoverDao",
+  "DAO_AUTOTASKDAO": "dao.autotaskdao.autoTaskDao"}

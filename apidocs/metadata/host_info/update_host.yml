@@ -1,0 +1,85 @@
+update host info
+---
+tags:
+- metadata
+summary: update specified host info
+description: ""
+parameters:
+- name: Authorization
+  in: header
+  type: string
+  required: true
+- name: host_name
+  in: query
+  type: string
+  required: true
+- name: body
+  in: body
+  required: true
+  schema:
+    type: object
+    required:
+    - cname            
+    - host_name        
+    - domain           
+    - site_code        
+    - private_ip       
+    - os_type_code     
+    - processor        
+    - kernel_release   
+    - hardware_platform
+    - cores            
+    - cpu_model        
+    - flag_node_virtual
+    - install_date     
+    - comments         
+    - createtime       
+    - lastmodifiedtime 
+    properties:
+      cname:
+        type: string              
+      host_name:
+        type: string          
+      domain:
+        type: string             
+      site_code:
+        type: string          
+      region_name:
+        type: string        
+      public_ip:
+        type: string          
+      private_ip:
+        type: string         
+      os_type_code:
+        type: string       
+      processor:
+        type: string          
+      kernel_release:
+        type: string     
+      hardware_platform:
+        type: string  
+      physical_cpu:
+        type: integer       
+      cores:
+        type: integer             
+      cpu_model:
+        type: string          
+      flag_node_virtual:
+        type: string  
+        default: 'N'
+      install_date:
+        type: string       
+      comments:
+        type: string           
+      ssh_port:
+        type: string
+        default: "22"  
+      createtime:
+        type: string
+        default: "2022-08-18 22:30:00"      
+      lastmodifiedtime:
+        type: string   
+        default: "2022-08-18 22:30:00" 
+responses:
+  200:
+    description: "detail host info"

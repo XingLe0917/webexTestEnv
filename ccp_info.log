@@ -1,0 +1,294 @@
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:31][4678526464][INFO] server size =614
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:44][4678526464][INFO] db size=202
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:78][4678526464][INFO] instance size =805
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:100][4678526464][INFO] schemaList size=2684
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=mqdbormt02, db_name=RACBQWEB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:128][4678526464][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex30016, password=UL7Nx#9gzGb, schematype=app is splex user, but schematype is not SPLEX
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=todbormt02, db_name=RACBOWEB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:125][4678526464][ERROR] trim_host=todbormt02, db_name=YYZTRADB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:131][4678526464][INFO] mappingInfoList size=461
+[Thu, 23 Dec 2021 19:58:15][DepotDBResource.py][line:152][4678526464][INFO] spchannelList size=758
+[Thu, 23 Dec 2021 20:12:10][view.py][line:189][123145558818816][INFO] check_auth_2, username=app, path=/api/getDBTns
+[Thu, 23 Dec 2021 20:12:12][view.py][line:191][123145558818816][INFO] resDict={'error': {'message': {'error_description': 'Invalid access token.'}, 'key': '400'}}
+[Thu, 23 Dec 2021 20:12:12][view.py][line:211][123145558818816][INFO] no scope.
+[Thu, 23 Dec 2021 20:12:12][view.py][line:176][123145558818816][INFO] old check_auth, username=app, path=/api/getDBTns
+[Thu, 23 Dec 2021 20:12:35][view.py][line:189][123145558818816][INFO] check_auth_2, username=app, path=/api/getDBTns
+[Thu, 23 Dec 2021 20:12:38][view.py][line:191][123145558818816][INFO] resDict={'error': {'message': {'error_description': 'Invalid access token.'}, 'key': '400'}}
+[Thu, 23 Dec 2021 20:12:38][view.py][line:211][123145558818816][INFO] no scope.
+[Thu, 23 Dec 2021 20:12:38][view.py][line:176][123145558818816][INFO] old check_auth, username=app, path=/api/getDBTns
+[Thu, 23 Dec 2021 20:12:49][view.py][line:189][123145558818816][INFO] check_auth_2, username=app, path=/api/getDBTns
+[Thu, 23 Dec 2021 20:12:51][view.py][line:191][123145558818816][INFO] resDict={'error': {'message': {'error_description': 'Invalid access token.'}, 'key': '400'}}
+[Thu, 23 Dec 2021 20:12:51][view.py][line:211][123145558818816][INFO] no scope.
+[Thu, 23 Dec 2021 20:12:51][view.py][line:176][123145558818816][INFO] old check_auth, username=app, path=/api/getDBTns
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:31][4396217856][INFO] server size =614
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:44][4396217856][INFO] db size=202
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:78][4396217856][INFO] instance size =805
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:100][4396217856][INFO] schemaList size=2684
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=mqdbormt02, db_name=RACBQWEB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:128][4396217856][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex30016, password=UL7Nx#9gzGb, schematype=app is splex user, but schematype is not SPLEX
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=todbormt02, db_name=RACBOWEB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:125][4396217856][ERROR] trim_host=todbormt02, db_name=YYZTRADB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:131][4396217856][INFO] mappingInfoList size=461
+[Sun, 02 Jan 2022 11:06:01][DepotDBResource.py][line:152][4396217856][INFO] spchannelList size=760
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:31][4666066432][INFO] server size =620
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:44][4666066432][INFO] db size=231
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:78][4666066432][INFO] instance size =786
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:100][4666066432][INFO] schemaList size=2759
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:125][4666066432][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:131][4666066432][INFO] mappingInfoList size=526
+[Fri, 18 Nov 2022 09:40:46][DepotDBResource.py][line:152][4666066432][INFO] spchannelList size=732
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:31][4359476736][INFO] server size =620
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:44][4359476736][INFO] db size=231
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:78][4359476736][INFO] instance size =786
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:100][4359476736][INFO] schemaList size=2759
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:125][4359476736][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:131][4359476736][INFO] mappingInfoList size=526
+[Fri, 18 Nov 2022 09:41:39][DepotDBResource.py][line:152][4359476736][INFO] spchannelList size=732
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:31][4719228416][INFO] server size =620
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:44][4719228416][INFO] db size=231
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:78][4719228416][INFO] instance size =786
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:100][4719228416][INFO] schemaList size=2759
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:125][4719228416][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:131][4719228416][INFO] mappingInfoList size=526
+[Fri, 18 Nov 2022 10:15:12][DepotDBResource.py][line:152][4719228416][INFO] spchannelList size=732
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:31][4521035264][INFO] server size =620
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:44][4521035264][INFO] db size=231
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:78][4521035264][INFO] instance size =786
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:100][4521035264][INFO] schemaList size=2759
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:125][4521035264][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:131][4521035264][INFO] mappingInfoList size=526
+[Fri, 18 Nov 2022 14:05:00][DepotDBResource.py][line:152][4521035264][INFO] spchannelList size=732
+[Fri, 18 Nov 2022 14:05:58][DepotDBResource.py][line:31][4672472576][INFO] server size =620
+[Fri, 18 Nov 2022 14:05:58][DepotDBResource.py][line:44][4672472576][INFO] db size=231
+[Fri, 18 Nov 2022 14:05:58][DepotDBResource.py][line:78][4672472576][INFO] instance size =786
+[Fri, 18 Nov 2022 14:05:58][DepotDBResource.py][line:100][4672472576][INFO] schemaList size=2759
+[Fri, 18 Nov 2022 14:05:58][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:125][4672472576][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:131][4672472576][INFO] mappingInfoList size=526
+[Fri, 18 Nov 2022 14:05:59][DepotDBResource.py][line:152][4672472576][INFO] spchannelList size=732
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:31][4623808000][INFO] server size =620
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:44][4623808000][INFO] db size=231
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:78][4623808000][INFO] instance size =786
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:100][4623808000][INFO] schemaList size=2759
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:125][4623808000][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:131][4623808000][INFO] mappingInfoList size=526
+[Fri, 18 Nov 2022 14:07:52][DepotDBResource.py][line:152][4623808000][INFO] spchannelList size=732
+[Fri, 18 Nov 2022 14:08:03][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 14:08:03][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('5bb4359370174fc18851ec560b98d105','PG_DB_FULLBACKUP','amdbpgtest','pgguweb','60063','email','lexing@cisco.com','0','send alert email to lexing','PG_DB_FULLBACKUP_pgguweb_amdbpgtest_60063')
+        
+[Fri, 18 Nov 2022 14:09:36][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 14:09:36][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('8d17e0b8a90b4e4c82ca5a9f6463484d','PG_DB_FULLBACKUP','','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','1','send alert room to lexing','PG_DB_FULLBACKUP')
+        
+[Fri, 18 Nov 2022 14:09:59][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 14:09:59][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('652cbd2ef15c4d3f8b6ebe484cc66c8d','PG_OS_FILESYSTEMUSAGE','','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','1','send alert room to lexing','PG_OS_FILESYSTEMUSAGE')
+        
+[Fri, 18 Nov 2022 14:11:43][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 14:11:43][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('f48cbb5e4efa40e2935e46e36cab0808','PG_DB_FULLBACKUP','amdbpgtest','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','0','send alert room to lexing','PG_DB_FULLBACKUP_amdbpgtest')
+        
+[Fri, 18 Nov 2022 14:12:26][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 14:12:26][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('578fa7e0faeb48b7bbf5be3fafc2ec94','PG_DB_FULLBACKUP','amdbpgtest02','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','0','send alert room to lexing','PG_DB_FULLBACKUP_amdbpgtest02')
+        
+[Fri, 18 Nov 2022 14:12:52][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 14:12:52][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('5341c3e730a94b69a9e934405d551fce','PG_OS_FILESYSTEMUSAGE','amdbpgtest02','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','0','send alert room to lexing','PG_OS_FILESYSTEMUSAGE_amdbpgtest02')
+        
+[Fri, 18 Nov 2022 14:34:15][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 14:34:15][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('042d7448422243f5aff7bfc3f3665993','PG_DB_FULLBACKUP','','','','email','lexing2@cisco.com','1','send alert email to lexing','PG_DB_FULLBACKUP')
+        
+[Fri, 18 Nov 2022 16:25:23][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 16:25:23][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('4dd01c1b170f4278af92bf1d80383c9f','PG_DB_FULLBACKUP','','','','email','lexing@cisco.com','1','send alert email to lexing','PG_DB_FULLBACKUP')
+        
+[Fri, 18 Nov 2022 16:26:15][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 16:26:15][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('90ecc33d967d4123b61520dd1b7b0bc0','PG_DB_FULLBACKUP','amdbpgtest','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','0','send alert email to lexing','PG_DB_FULLBACKUP_amdbpgtest')
+        
+[Fri, 18 Nov 2022 16:26:34][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 16:26:34][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('64f924d0d6284f3faa34988da1713532','PG_OS_FILESYSTEMUSAGE','','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','1','send alert email to lexing','PG_OS_FILESYSTEMUSAGE')
+        
+[Fri, 18 Nov 2022 16:28:53][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 16:28:53][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('d341dac669714eb1a202b5a79984b292','PG_OS_FILESYSTEMUSAGE','amdbpgtest','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','0','send alert room to lexing','PG_OS_FILESYSTEMUSAGE_amdbpgtest')
+        
+[Fri, 18 Nov 2022 16:29:45][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 16:29:45][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('ac1a619b49dc45afb111d0dc6f3dc92c','PG_OS_FILESYSTEMUSAGE','amdbpgtest','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','0','send alert room to lexing','PG_OS_FILESYSTEMUSAGE_amdbpgtest')
+        
+[Fri, 18 Nov 2022 16:30:02][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 16:30:02][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('c36b893e3ec54c2c81cc8f8b84d00101','PG_OS_FILESYSTEMUSAGE','','','','email','lexing@cisco.com','1','send alert email to lexing','PG_OS_FILESYSTEMUSAGE')
+        
+[Fri, 18 Nov 2022 16:31:38][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 16:31:38][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('99d7b4b4f5894bb7a94a264262f03804','PG_OS_FILESYSTEMUSAGE','','','','email','lexing@cisco.com','1','all to lexing','PG_OS_FILESYSTEMUSAGE')
+        
+[Fri, 18 Nov 2022 16:32:15][PGAlertRule.py][line:38][123145486569472][INFO] add new rule
+[Fri, 18 Nov 2022 16:32:15][depotdbdao.py][line:4534][123145486569472][INFO] insert into WBXMONITORALERTCONFIG(ALERT_ID,ALERT_TYPE,HOST_NAME,DB_NAME,SPLEX_PORT,ALERT_CHANNEL_TYPE,ALERT_CHANNEL_VALUE,IS_PUBLIC,COMMENTS,ALERT_TITLE) 
+        values('3a6b3e3e4e57427eae1df26c7799b559','PG_OS_FILESYSTEMUSAGE','amdbpgtest','','','room','Y2lzY29zcGFyazovL3VzL1JPT00vZDI4MjcxMDgtMTZiNy0zMmJjLWE3NmUtNmVlNTEwMjU4NDk5','0','only amdbpgtest send lexing','PG_OS_FILESYSTEMUSAGE_amdbpgtest')
+        
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:31][4547413504][INFO] server size =621
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:44][4547413504][INFO] db size=231
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:78][4547413504][INFO] instance size =787
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:100][4547413504][INFO] schemaList size=2762
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:128][4547413504][ERROR] trim_host=lndbormt01, db_name=LN3TELDB, schemaname=splex20001, password=wbxsplex, schematype=sms is splex user, but schematype is not SPLEX
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:125][4547413504][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:131][4547413504][INFO] mappingInfoList size=526
+[Mon, 21 Nov 2022 11:24:01][DepotDBResource.py][line:152][4547413504][INFO] spchannelList size=732
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:31][4749555200][INFO] server size =621
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:44][4749555200][INFO] db size=231
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:78][4749555200][INFO] instance size =787
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:100][4749555200][INFO] schemaList size=2762
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:128][4749555200][ERROR] trim_host=lndbormt01, db_name=LN3TELDB, schemaname=splex20001, password=wbxsplex, schematype=sms is splex user, but schematype is not SPLEX
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:125][4749555200][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:131][4749555200][INFO] mappingInfoList size=526
+[Mon, 21 Nov 2022 13:45:00][DepotDBResource.py][line:152][4749555200][INFO] spchannelList size=732
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:31][4576790016][INFO] server size =621
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:44][4576790016][INFO] db size=231
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:78][4576790016][INFO] instance size =787
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:100][4576790016][INFO] schemaList size=2762
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:128][4576790016][ERROR] trim_host=lndbormt01, db_name=LN3TELDB, schemaname=splex20001, password=wbxsplex, schematype=sms is splex user, but schematype is not SPLEX
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:125][4576790016][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:131][4576790016][INFO] mappingInfoList size=526
+[Mon, 21 Nov 2022 13:47:25][DepotDBResource.py][line:152][4576790016][INFO] spchannelList size=732
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:31][4551652864][INFO] server size =621
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:44][4551652864][INFO] db size=231
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:78][4551652864][INFO] instance size =787
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:100][4551652864][INFO] schemaList size=2762
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=amdbormt01, db_name=BDPRDEAM, schemaname=splex_deny, password=gzmgV8Urkt6, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=amdbormt02, db_name=AM2CSPDB, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=frdbormt01, db_name=RACAGCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=frdbormt02, db_name=RACEMED, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:128][4551652864][ERROR] trim_host=lndbormt01, db_name=LN3TELDB, schemaname=splex20001, password=wbxsplex, schematype=sms is splex user, but schematype is not SPLEX
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=mqdbormt02, db_name=BDPRDBMQ, schemaname=splex_deny, password=cwIt6ZlAw3r8D, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=mqdbormt02, db_name=RACBQCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=sjdborbf0, db_name=IDBRKFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=sjdborbf0, db_name=IDPRDFS, schemaname=splex_deny, password=FAZ98RV1g0r#1, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=tadborbf0, db_name=IDBRKFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=tadborbf0, db_name=IDPRDFT, schemaname=splex_deny, password=SDv15QtaQ1jdc#F, schematype=wbxmaint is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=todbormt02, db_name=RACBOCAL, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:125][4551652864][ERROR] trim_host=todbormt02, db_name=RACBOCSP, schemaname=splex_deny, password=wbxsplex, schematype=splex is splex_deny user, but schematype is not splex_deny
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:131][4551652864][INFO] mappingInfoList size=526
+[Mon, 21 Nov 2022 13:49:47][DepotDBResource.py][line:152][4551652864][INFO] spchannelList size=732

@@ -1,0 +1,69 @@
+create new shareplex info
+---
+tags:
+- metadata
+summary: create new shareplex info
+description: ""
+parameters:
+- name: Authorization
+  in: header
+  type: string
+  required: true
+- name: body
+  in: body
+  required: true
+  schema:
+    type: object
+    required:
+    - src_host
+    - src_db
+    - src_monitor_tablename
+    - port
+    - tgt_host
+    - tgt_db
+    - tgt_monitor_tablename
+    - src_splex_sid
+    - tgt_splex_sid
+    - src_schema
+    - tgt_schema
+    - qname
+    - created_by
+    - modified_by
+    - createtime
+    - lastmodifiedtime
+    properties:
+      src_host:
+        type: string
+      src_db:
+        type: string
+      src_monitor_tablename:
+        type: string
+      port:
+        type: integer
+      tgt_host:
+        type: string
+      tgt_db:
+        type: string
+      tgt_monitor_tablename:
+        type: string
+      src_splex_sid:
+        type: string
+      tgt_splex_sid:
+        type: string
+      src_schema:
+        type: string
+      tgt_schema:
+        type: string
+      qname:
+        type: string
+      created_by:
+        type: string
+      modified_by:
+        type: string
+      createtime:
+        type: string
+      lastmodifiedtime:
+        type: string
+responses:
+  200:
+    description: "detail for shareplex info"
